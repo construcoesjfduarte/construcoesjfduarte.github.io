@@ -57,14 +57,24 @@ body{
 
 
 .about{
-    height: calc(100vh - 110px);
+    height: 100vh;
     width: 100%;
     padding: 50px;
 }
 
-.about > .container {
+.about > .wrapper {
+    height: 100%;
+    padding-top: 50px;
+}
+
+.about > .wrapper > .container{
     background-color: rgba(255, 255, 255, 0.4);
     height: 100%;
-    /* border-radius: .5rem; */
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+
+
+.home, .about{
+    padding-top: 110px;
 }
