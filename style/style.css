@@ -12,10 +12,16 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+*:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
+body{
+    /* background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); */
+    background-color: white;
+}
 
 .navbar{
     background-color: white;
@@ -24,11 +30,15 @@ body{
     -webkit-box-shadow: 0px 0px 2px 0px var(--nav-shadow);
     -moz-box-shadow: 0px 0px 2px 0px var(--nav-shadow);
     box-shadow: 0px 0px 2px 0px var(--nav-shadow);
+    /* height: 80px; */
+    padding: 10px 0; 
 
 }
 
 .navbar .navbar-brand svg{
-    height: 100px;
+    top: 0px;
+    height: 70px;
+    position: absolute;
 }
 
 .navbar .navbar-nav .nav-item .nav-link{
@@ -49,6 +59,30 @@ body{
 .home{
     height: 100vh;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("../images/slider.jpg") !important; 
+
+}
+
+.home > .home-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.home > .slider{
+    position: absolute;
+    font-size: 120px;
+    color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100vh;
+    transform: translateY(calc(-50% + 12px));
 }
 
 /* .home{
@@ -76,5 +110,5 @@ body{
 
 
 .home, .about{
-    padding-top: 110px;
+    padding-top: 70px;
 }
