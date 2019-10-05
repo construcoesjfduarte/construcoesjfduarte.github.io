@@ -1,5 +1,6 @@
 let status = {
     active: "erro323464",
+    animation: new Array(),
     homeTop: 0,
     homeSize: $("#home-div").outerHeight(),
     aboutTop: $("#about-div").offset().top,
@@ -18,39 +19,41 @@ let contactsLink = document.getElementById("contacts-link");
 
 function scrollTo(position){
     var speed = 600;
+    status.animation.push("animation");
     $('html,body').animate({
         scrollTop: position
     }, speed, function(){
-        status.lastPosition = position;
+        status.animation.pop();
     });
 }
 
 function changeActive(id){
 
     if(status.active != id){
-
         if(document.getElementById(status.active)){
             document.getElementById(status.active).parentElement.classList.remove("active");
         }
         document.getElementById(id).parentElement.classList.add("active");
         status.active = id;
 
-        switch (id) {
-            case "home-link":
-                window.location.hash = "inicio";
-                break;
-            case "about-link":
-                window.location.hash = "sobre";
-                break;
-            case "portefolio-link":
-                window.location.hash = "portefolio";
-                break;
-            case "contacts-link":
-                window.location.hash = "contactos";
-                break;
-        
-            default:
-                break;
+        if(status.animation.length === 0){
+            switch (id) {
+                case "home-link":
+                    window.location.hash = "inicio";
+                    break;
+                case "about-link":
+                    window.location.hash = "sobre";
+                    break;
+                case "portefolio-link":
+                    window.location.hash = "portefolio";
+                    break;
+                case "contacts-link":
+                    window.location.hash = "contactos";
+                    break;
+            
+                default:
+                    break;
+            }
         }
     }
 }
