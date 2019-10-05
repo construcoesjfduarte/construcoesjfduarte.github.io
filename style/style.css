@@ -1,0 +1,76 @@
+:root {
+    --nav-shadow: rgba(0, 0, 0, 0.25);
+    --main-color: #fa510d;
+    --secondary-color: #fc9066;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cairo:200,400,700,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+}
+
+
+.navbar{
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-box-shadow: 0px 0px 2px 0px var(--nav-shadow);
+    -moz-box-shadow: 0px 0px 2px 0px var(--nav-shadow);
+    box-shadow: 0px 0px 2px 0px var(--nav-shadow);
+
+}
+
+.navbar .navbar-brand svg{
+    height: 100px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+    color: rgba(0, 0, 0, 0.6) !important;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.navbar .navbar-nav .nav-item.active{
+    border-bottom: 3px solid var(--main-color);
+}
+
+.navbar .navbar-nav .nav-item:not(.active):hover{
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+}
+
+/* .home{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+} */
+
+.home, .about{
+    margin-top: 100px;
+}
+
+
+.about{
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+    /* background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal,color-burn; */
+}
+
+.about > .container {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
