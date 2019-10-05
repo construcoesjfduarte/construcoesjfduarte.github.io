@@ -34,6 +34,24 @@ function changeActive(id){
         }
         document.getElementById(id).parentElement.classList.add("active");
         status.active = id;
+
+        switch (id) {
+            case "home-link":
+                window.location.hash = "inicio";
+                break;
+            case "about-link":
+                window.location.hash = "sobre";
+                break;
+            case "portefolio-link":
+                window.location.hash = "portefolio";
+                break;
+            case "contacts-link":
+                window.location.hash = "contactos";
+                break;
+        
+            default:
+                break;
+        }
     }
 }
 
@@ -103,36 +121,8 @@ window.addEventListener('scroll', function(event){
 
     ];
 
-    this.console.log(divs.sort( compare ));
     let active = divs.sort(compare)[0].id;
-
     changeActive(active);
-
-
-
-
-
-    // if(position < status.lastPosition){
-    //     this.console.log("scroll up");
-
-    // }
-    // else {
-    //     this.console.log("scroll down");
-    // }
-
-    // if(position >= status.contactsTop){
-    //     changeActive(contactsLink.id);
-    // }
-    // else if(position >= status.portefolioTop){
-    //     changeActive(portefolioLink.id);
-    // }
-    // else if(position >= status.aboutTop){
-    //     changeActive(aboutLink.id);
-    // }
-    // else changeActive(homeLink.id);
-
-    
-
 });
 
 scrollTo(0);
