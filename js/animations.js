@@ -8,8 +8,7 @@ let status = {
     portefolioTop: $("#portefolio-div").offset().top,
     portefolioSize: $("#portefolio-div").outerHeight(),
     contactsTop: $("#contacts-div").offset().top,
-    contactsSize: $("#contacts-div").outerHeight(),
-    lastPosition: 9809789863785763
+    contactsSize: $("#contacts-div").outerHeight()
 }
 
 let homeLink = document.getElementById("home-link");
@@ -121,7 +120,6 @@ window.addEventListener('scroll', function(event){
         {id: aboutLink.id, pxs: pxAbout},
         {id: portefolioLink.id, pxs: pxPortefolio},
         {id: contactsLink.id, pxs: pxContacts}
-
     ];
 
     let active = divs.sort(compare)[0].id;
@@ -130,4 +128,5 @@ window.addEventListener('scroll', function(event){
 
 scrollTo(0);
 changeActive(homeLink.id);
+window.location.hash = "inicio";
 

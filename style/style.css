@@ -20,8 +20,9 @@
 
 body{
     /* background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); */
-    background-color: white;
+    background-color: whitesmoke;
 }
+
 
 .navbar{
     background-color: white;
@@ -31,7 +32,7 @@ body{
     -moz-box-shadow: 0px 0px 2px 0px var(--nav-shadow);
     box-shadow: 0px 0px 2px 0px var(--nav-shadow);
     /* height: 80px; */
-    padding: 10px 0; 
+    padding: 10px 10px; 
 
 }
 
@@ -54,6 +55,24 @@ body{
 
 .navbar .navbar-nav .nav-item:not(.active):hover{
     border-bottom: 3px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 991px) {
+    .navbar .navbar-nav .nav-item.active{
+        border: 0;
+    }
+
+    .navbar .navbar-nav .nav-item.active > .nav-link{
+        color: var(--main-color) !important;
+    }
+    
+    .navbar .navbar-nav .nav-item:not(.active):hover{
+        border: 0;
+    }
+
+    .navbar .navbar-nav .nav-item:not(.active):hover > .nav-link{
+        color: var(--secondary-color) !important;
+    }
 }
 
 .home{
@@ -89,26 +108,39 @@ body{
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 } */
 
+.home, .section {
+    padding-top: 63px;
+}
 
-.about{
+.section {
     height: 100vh;
-    width: 100%;
-    padding: 50px;
+    width: 95%;
+    margin-left: 2.5%;
+
+    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
 }
 
-.about > .wrapper {
+.section  > .wrapper {
     height: 100%;
-    padding-top: 50px;
+    padding: 50px 0;
+
 }
 
-.about > .wrapper > .container{
-    background-color: rgba(255, 255, 255, 0.4);
+.section  > .wrapper > .container{
+    position: relative;
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-color: white;
     height: 100%;
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .10);
+    border-radius: .5rem;
 }
 
-
-
-.home, .about{
-    padding-top: 70px;
+.section  > .wrapper > .container > .section-title{
+    position: absolute;
+    font-size: 80px;
+    top: -65px;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
