@@ -144,3 +144,13 @@ body{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
+
+footer svg{
+    height: 25px;
+    height: 25px;
+}
+
+footer ul{
+    margin-bottom: 0;
+}
