@@ -1,4 +1,5 @@
 let status = {
+    navbarVisibility: false,
     active: "erro323464",
     animation: new Array(),
     homeTop: 0,
@@ -124,6 +125,17 @@ window.addEventListener('scroll', function(event){
 
     let active = divs.sort(compare)[0].id;
     changeActive(active);
+
+    if(active === homeLink.id && status.navbarVisibility){
+        document.getElementById("navbar").classList.remove("solid");
+        document.getElementById("navbar").classList.add("transparent");
+        status.navbarVisibility = false;
+    }
+    else if(active !== homeLink.id && !status.navbarVisibility){
+        document.getElementById("navbar").classList.add("solid");
+        document.getElementById("navbar").classList.remove("transparent");
+        status.navbarVisibility = true;
+    }
 });
 
 scrollTo(0);
