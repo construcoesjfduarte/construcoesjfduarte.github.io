@@ -5,6 +5,7 @@ let status = {
 
 document.getElementById("navbar-toggler").addEventListener('click', function(event){
     this.getElementsByClassName("icon")[0].classList.toggle("close");
+    document.getElementById("navbar").classList.toggle("open");
 })
 
 window.addEventListener('scroll', function(event){
