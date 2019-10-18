@@ -20,6 +20,20 @@ window.addEventListener('scroll', function(event){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = true;
     }
-
-
 });
+
+
+// $.ajax({
+//     url: "http://localhost:3000/api/emails/send",
+//     type: "POST",
+//     data: {name: "Web Test", email: "drs.falcao@gmail.com"},
+//     dataType: "json",
+//     success: function(data) {
+//         console.log(data);
+        
+//     },
+//     error: function(data){
+//         console.error(data);
+
+//     }
+// });
