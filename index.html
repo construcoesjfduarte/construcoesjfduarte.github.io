@@ -39,7 +39,9 @@
     <link rel="stylesheet" href="./style/custom.css" />
 
     <!-- Custom js-->
+    <script src="./js/dropobox.manager.js"></script>
     <script src="./js/animations.js" defer></script>
+    <script src="./js/mail.manager.js" defer></script>
 
 </head>
 <body>
@@ -87,7 +89,7 @@
     <section>
         <div class="about container">
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-10 col-md-8 col-lg-8" style="background-color: white;">
                     <p style="padding-top: 30px; font-weight: 100; font-size: 26px;">
                         Descrição sobre a empresa (À espera do texto !!!)
                     </p>
@@ -95,8 +97,26 @@
             </div>
         </div>
 
-        <div class="portefolio">
+        <div class="portefolio container">
+            <!-- <div class="lds-facebook"><div></div><div></div><div></div></div> -->
+        </div>
 
+        <div class="contacts container">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8 col-lg-8 contacts-card">
+                    <form id="mailForm">
+                        <label for="name">Nome </label>
+                        <input type="text" name="name" value=""><br>
+                        <label for="email">Email </label>
+                        <input type="email" name="email" value=""><br>
+                        <label for="content">Conteúdo </label><br>
+                        <textarea name="content" form="mailForm" placeholder="Escreva a sua mensagem" rows="5"></textarea>
+ 
+                        <input type="submit" value="Enviar">
+                        
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </body>
