@@ -14,9 +14,18 @@
     box-shadow: none !important;
 }
 
+.hidden{
+    display: none;
+}
+
 body{
     /* background-image: linear-gradient(to bottom, #141414 0%, #806353 100%); */
     background-color: whitesmoke;
+    
+}
+
+body.not-ready{
+    overflow: hidden;
 }
 
 
@@ -237,13 +246,30 @@ section .contacts .contacts-card #mailForm textarea{
     }
 }
 
+.loader{
+    position: fixed;
+    width: 100vw; 
+    height: 100vh;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 378454649856895;
+}
+
+
 /* LOADER */
 .lds-facebook {
     display: inline-block;
-    position: relative;
+    position: absolute;
     width: 64px;
     height: 64px;
-  }
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
   .lds-facebook div {
     display: inline-block;
     position: absolute;
