@@ -1,14 +1,12 @@
 let status = {
     navbarSolid: false,
-    homeTop: 0,
-    aboutTop: $("#sobre").offset().top
+    scrollSpeed: 600
 }
 
 function scrollTo(position){
-    var speed = 600;
     $('html,body').animate({
         scrollTop: position
-    }, speed);
+    }, status.scrollSpeed);
 }
 
 document.getElementById("navbar-toggler").addEventListener('click', function(event){
@@ -32,13 +30,19 @@ window.addEventListener('scroll', function(_event){
 
 let homeLink = document.getElementById("home-link");
 let aboutLink = document.getElementById("about-link");
+let portefolioLink = document.getElementById("portefolio-link");
 
 homeLink.addEventListener('click', function(event){
     event.preventDefault();
-    scrollTo(status.homeTop);
+    scrollTo(0);
 });
 
 aboutLink.addEventListener('click', function(event){
     event.preventDefault();
-    scrollTo(status.aboutTop);
+    scrollTo($("#sobre").offset().top);
+});
+
+portefolioLink.addEventListener('click', function(event){
+    event.preventDefault();
+    scrollTo($("#portefolio").offset().top);
 });
