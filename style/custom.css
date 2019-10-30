@@ -152,6 +152,8 @@ main .home{
     background-position: center;
     background-image: url("../images/slider.jpg") !important; 
     z-index: -30;
+    -webkit-transform:translate3d(0,0,-30);
+    transform: translate3d(0,0,-30);
 }
 
 
@@ -170,6 +172,8 @@ main .home-front {
     background-position: center;
     background-image: url("../images/slider_front.png") !important;
     z-index: -10;
+    -webkit-transform:translate3d(0,0,-10);
+    transform: translate3d(0,0,-10);
 }
 
 
@@ -184,8 +188,8 @@ main .title-wrapper{
     width: 100vw;
     padding: 0;
     z-index: -20;
-    -webkit-transform:translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,-20);
+    transform: translate3d(0,0,-20);
     
 }
 
