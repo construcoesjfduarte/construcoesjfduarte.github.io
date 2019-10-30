@@ -4,7 +4,7 @@ let ready = {
 }
 
 function setPageReady(){
-	// document.body.classList.toggle("not-ready");
+	document.body.classList.toggle("not-ready");
 	document.getElementById("loader").classList.toggle("hidden");
 }
 
