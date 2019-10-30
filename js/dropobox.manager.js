@@ -4,7 +4,7 @@ let ready = {
 }
 
 function setPageReady(){
-	document.body.classList.toggle("not-ready");
+	// document.body.classList.toggle("not-ready");
 	document.getElementById("loader").classList.toggle("hidden");
 }
 
@@ -19,7 +19,7 @@ window.onload = function(){
 }
 
 $.ajax({
-    url: "http://localhost:3000/api/albuns",
+	url: "http://localhost:3000/api/albuns",
     // url: "https://contrucoes-jf-duarte.herokuapp.com/api/albuns",
     type: "GET",
     data: {},
@@ -30,12 +30,14 @@ $.ajax({
 
 		if(ready.page && ready.server){
 			setPageReady();
+			
 		}
 
 
     },
     error: function(data){
-        console.error(data);
+		console.error(data);
     }
 });
 
+// setPageReady();
