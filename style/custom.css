@@ -53,6 +53,10 @@ body.not-ready{
     color: rgba(0, 0, 0, .4);
 }
 
+.navbar.solid .navbar-brand:hover{
+    color: rgba(0, 0, 0, .6);
+}
+
 @media screen and (max-width: 991px) {
     .navbar:not(.solid).open{
         background: rgba(255,255,255,.4);
@@ -211,17 +215,20 @@ section .about{
 
 @media screen and (max-width: 767px){
     section .about{
-        padding: 40px 0;
+        padding: 96px 0 ;
     }
 }
 
-section .about > div{
-    height: 100%;
+@media screen and (min-width: 768px){
+    section .about > div{
+        height: 100%;
+    }
+    
+    section .about > div > div{
+        margin: auto;
+    }
 }
 
-section .about > div > div{
-    margin: auto;
-}
 
 section .about h1{
     font-family: 'Ubuntu', sans-serif;
@@ -236,9 +243,9 @@ section .about p{
 
 section .portefolio{
     width: 100%;
-    padding: 40px 0;
     background-color: var(--color-3);
     margin: 0 !important;
+    min-height: 100vh;
 }
 
 
@@ -246,6 +253,7 @@ section .contacts{
     width: 100%;
     background-color: var(--color-4);
     margin: 0 !important;
+    min-height: 100vh;
 }
 
 section .contacts .mapouter iframe{

@@ -1,5 +1,14 @@
 let status = {
-    navbarSolid: false
+    navbarSolid: false,
+    homeTop: 0,
+    aboutTop: $("#sobre").offset().top
+}
+
+function scrollTo(position){
+    var speed = 600;
+    $('html,body').animate({
+        scrollTop: position
+    }, speed);
 }
 
 document.getElementById("navbar-toggler").addEventListener('click', function(event){
@@ -19,4 +28,17 @@ window.addEventListener('scroll', function(_event){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = true;
     }
+});
+
+let homeLink = document.getElementById("home-link");
+let aboutLink = document.getElementById("about-link");
+
+homeLink.addEventListener('click', function(event){
+    event.preventDefault();
+    scrollTo(status.homeTop);
+});
+
+aboutLink.addEventListener('click', function(event){
+    event.preventDefault();
+    scrollTo(status.aboutTop);
 });
