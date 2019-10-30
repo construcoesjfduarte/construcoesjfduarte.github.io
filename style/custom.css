@@ -38,6 +38,21 @@ body.not-ready{
     background-color: transparent;
 }
 
+.navbar .back-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    display: none;
+}
+
+.navbar.solid .back-nav, .navbar.open .back-nav{
+    display: block;
+}
 
 .navbar .navbar-brand{
     font-family: 'Ubuntu', sans-serif;
@@ -68,7 +83,7 @@ body.not-ready{
 }
 
 .navbar.solid{
-    background-color: white;
+    background-color: rgba(255, 255, 255, .6);
     -webkit-box-shadow: 0px 0px 2px 0px #00000040;
     -moz-box-shadow: 0px 0px 2px 0px #00000040;
     box-shadow: 0px 0px 2px 0px #00000040;
