@@ -3,11 +3,18 @@ let ready = {
 	server: false
 }
 
+/**
+ * Removes the initial loading page
+ */
 function setPageReady(){
 	document.body.classList.toggle("not-ready");
 	document.getElementById("loader").classList.toggle("hidden");
 }
 
+/**
+ * Display the information sent by the server 
+ * @param {Array} data data sent by the server
+ */
 function displayAlbuns(data){
 	let container = document.getElementById("albuns-container");
 	data.albuns.forEach(album => {
@@ -37,7 +44,9 @@ function displayAlbuns(data){
 	});
 }
 
-
+/**
+ * Window listener. Sets the page as ready
+ */
 window.onload = function(){
 	ready.page = true;
 
@@ -46,7 +55,9 @@ window.onload = function(){
 	}
 }
 
-
+/**
+ * Sends a request for the server, asking the information about the albuns
+ */
 function getAlbunsFromServer(){
 	$.ajax({
 		// url: "http://localhost:3000/api/albuns",

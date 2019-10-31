@@ -41,8 +41,6 @@ window.addEventListener('scroll', function(_event){
 });
 
 
-
-let portefolioLink = document.getElementById("portefolio-link");
 /**
  * Home link event listener. Scroll to homePage on click (with animation)
  */
@@ -59,6 +57,9 @@ document.getElementById("about-link").addEventListener('click', function(event){
     scrollTo($("#sobre").offset().top);
 });
 
+/**
+ * Portfolio link event listener. Scroll to portefolioPage on click (with animation)
+ */
 document.getElementById("portefolio-link").addEventListener('click', function(event){
     event.preventDefault();
     scrollTo($("#portefolio").offset().top);
