@@ -40,6 +40,13 @@ window.addEventListener('scroll', function(_event){
     }
 });
 
+/**
+ * Brand link event listener. Scroll to homePage on click (with animation)
+ */
+document.getElementById("brand-link").addEventListener('click', function(event){
+    event.preventDefault();
+    scrollTo(0);
+});
 
 /**
  * Home link event listener. Scroll to homePage on click (with animation)
