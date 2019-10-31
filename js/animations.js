@@ -3,17 +3,29 @@ let status = {
     scrollSpeed: 600
 }
 
+
+/**
+ * Create scroll animation to the given position-y
+ * @param {Number} position position-y to scroll to
+ */
 function scrollTo(position){
     $('html,body').animate({
         scrollTop: position
     }, status.scrollSpeed);
 }
 
+/**
+ * Navbar toggler event listener. Changes the display of the toggler and open/closes 
+ * the navbar 
+ */
 document.getElementById("navbar-toggler").addEventListener('click', function(event){
     this.getElementsByClassName("icon")[0].classList.toggle("close");
     document.getElementById("navbar").classList.toggle("open");
 })
 
+/**
+ * Window event listener. Changes the navbar opacity scrolling down
+ */
 window.addEventListener('scroll', function(_event){
 
     let navbarHeight = document.getElementById("navbar").offsetHeight;
@@ -28,21 +40,26 @@ window.addEventListener('scroll', function(_event){
     }
 });
 
-let homeLink = document.getElementById("home-link");
-let aboutLink = document.getElementById("about-link");
-let portefolioLink = document.getElementById("portefolio-link");
 
-homeLink.addEventListener('click', function(event){
+
+let portefolioLink = document.getElementById("portefolio-link");
+/**
+ * Home link event listener. Scroll to homePage on click (with animation)
+ */
+document.getElementById("home-link").addEventListener('click', function(event){
     event.preventDefault();
     scrollTo(0);
 });
 
-aboutLink.addEventListener('click', function(event){
+/**
+ * About link event listener. Scroll to aboutPage on click (with animation)
+ */
+document.getElementById("about-link").addEventListener('click', function(event){
     event.preventDefault();
     scrollTo($("#sobre").offset().top);
 });
 
-portefolioLink.addEventListener('click', function(event){
+document.getElementById("portefolio-link").addEventListener('click', function(event){
     event.preventDefault();
     scrollTo($("#portefolio").offset().top);
 });
