@@ -18,8 +18,8 @@ window.onload = function(){
 }
 
 $.ajax({
-	url: "http://localhost:3000/api/albuns",
-    // url: "https://contrucoes-jf-duarte.herokuapp.com/api/albuns",
+	// url: "http://localhost:3000/api/albuns",
+    url: "https://contrucoes-jf-duarte.herokuapp.com/api/albuns",
     type: "GET",
     data: {},
     dataType: "json",
