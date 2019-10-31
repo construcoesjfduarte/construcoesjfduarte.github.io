@@ -55,7 +55,8 @@ body.not-ready{
     display: block;
 }
 
-.navbar .navbar-brand{
+.navbar .navbar-brand,
+.navbar.open .navbar-brand:focus{
     font-family: 'Ubuntu', sans-serif;
     color: rgba(255, 255, 255, .4);
 }
@@ -64,7 +65,8 @@ body.not-ready{
     color: rgba(255, 255, 255, .5);
 }
 
-.navbar.solid .navbar-brand{
+.navbar.solid .navbar-brand, 
+.navbar.solid .navbar-brand:focus{
     font-family: 'Ubuntu', sans-serif;
     color: rgba(0, 0, 0, .4);
 }
@@ -78,7 +80,8 @@ body.not-ready{
         background: rgba(255,255,255,.4);
     }
 
-    .navbar.open .navbar-brand{
+    .navbar.open .navbar-brand,
+    .navbar.open .navbar-brand:focus{
         color: rgba(0, 0, 0, .6);
     }
 }
