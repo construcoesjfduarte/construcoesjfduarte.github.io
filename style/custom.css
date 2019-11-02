@@ -249,12 +249,14 @@ section .about{
 }
 
 
-section .about h1{
+section .about h1,
+section .portefolio h1{
     font-family: 'Ubuntu', sans-serif;
     color: var(--black);
 }
 
-section .about p{
+section .about p,
+section .portefolio p{
     text-align: justify;
     word-wrap: break-word;
     color: var(--black);
@@ -267,6 +269,10 @@ section .portefolio{
     margin: 0 !important;
     min-height: 100vh;
     padding: 96px 0 ;
+}
+
+section .portefolio p{
+    padding: 0 5px;
 }
 
 section .portefolio .album{
