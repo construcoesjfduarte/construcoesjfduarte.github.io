@@ -18,7 +18,7 @@ function scrollTo(position){
  * Navbar toggler event listener. Changes the display of the toggler and open/closes 
  * the navbar 
  */
-document.getElementById("navbar-toggler").addEventListener('click', function(event){
+document.getElementById("navbar-toggler").addEventListener('click', function(_event){
     this.getElementsByClassName("icon")[0].classList.toggle("close");
     document.getElementById("navbar").classList.toggle("open");
 })

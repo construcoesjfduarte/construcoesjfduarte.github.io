@@ -366,9 +366,7 @@ section .contacts .contacts-card #mailForm textarea{
     }
 }
 
-
-
-
+/* LOADER */
 
 .loader{
     position: fixed;
@@ -382,8 +380,6 @@ section .contacts .contacts-card #mailForm textarea{
     z-index: 378454649856895;
 }
 
-
-/* LOADER */
 .lds-facebook {
     display: inline-block;
     position: absolute;
@@ -394,27 +390,31 @@ section .contacts .contacts-card #mailForm textarea{
     transform: translate(-50%, -50%);
 }
 
-  .lds-facebook div {
+.lds-facebook div {
     display: inline-block;
     position: absolute;
     left: 6px;
     width: 13px;
     background: rgb(59, 59, 59);
     animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  }
-  .lds-facebook div:nth-child(1) {
+}
+
+.lds-facebook div:nth-child(1) {
     left: 6px;
     animation-delay: -0.24s;
-  }
-  .lds-facebook div:nth-child(2) {
+}
+
+.lds-facebook div:nth-child(2) {
     left: 26px;
     animation-delay: -0.12s;
-  }
-  .lds-facebook div:nth-child(3) {
+}
+
+.lds-facebook div:nth-child(3) {
     left: 45px;
     animation-delay: 0;
-  }
-  @keyframes lds-facebook {
+}
+
+@keyframes lds-facebook {
     0% {
       top: 6px;
       height: 51px;
@@ -422,5 +422,35 @@ section .contacts .contacts-card #mailForm textarea{
     50%, 100% {
       top: 19px;
       height: 26px;
-    }
-  }
+    } 
+}
+
+/* Album screen */
+.album-screen{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .99);
+    z-index: 9999;
+}
+
+.album-screen .album-close{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.album-screen .album-image-display{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 70vw;
+    max-height: 70vh;
+}
