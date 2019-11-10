@@ -502,3 +502,23 @@ section .contacts .contacts-card #mailForm textarea{
     display: inline-block;
     top: 0px;
 }
+
+.album-screen .album-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 15px;
+}
+
+.album-screen .album-arrow:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.album-screen .album-arrow#album-arrow-last{
+    transform: translateX(calc(-100% - 5px));
+}
+
+.album-screen .album-arrow#album-arrow-next{
+    transform: translateX(5px);
+}
