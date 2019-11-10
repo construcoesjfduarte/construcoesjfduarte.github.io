@@ -441,9 +441,13 @@ section .contacts .contacts-card #mailForm textarea{
     position: fixed;
     top: 15px;
     right: 20px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     font-size: 30px;
+}
+
+.album-screen .album-close:hover{
+    color: white;
 }
 
 .album-screen .album-image-display{
@@ -453,4 +457,41 @@ section .contacts .contacts-card #mailForm textarea{
     transform: translate(-50%,-50%);
     max-width: 70vw;
     max-height: 70vh;
+}
+
+.album-screen .album-image-counter{
+    position: fixed;
+    top:30px;
+    left: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    transform: translatey(-50%);
+}
+
+.album-screen .album-rating{
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.album-screen .album-rating span{
+    float: right;
+}
+
+.album-screen .album-rating .star{
+    display: none;
+    cursor: pointer;
+}
+
+.album-screen .album-rating span:hover .star,
+.album-screen .album-rating span:hover ~ span .star
+{
+    color: red !important;
+}
+
+.album-screen .album-rating .star.show{
+    display: inline-block;
+    /* color: #fff176; */
+    color: #ced7db;
 }

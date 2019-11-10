@@ -26,6 +26,8 @@ function displayNext(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[++display.index].classList.toggle("hidden");
+		let albumCounter = document.getElementById('album-image-counter');
+		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
 	}
 
 }
@@ -36,6 +38,8 @@ function displayLast(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[--display.index].classList.toggle("hidden");
+		let albumCounter = document.getElementById('album-image-counter');
+		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
 	}
 
 }
@@ -109,9 +113,12 @@ function swipeHandler(_el,d) {
 }
 
 
-
 function showAlbum(album){
 	let container = document.getElementById('album-image-display-container');
+	let albumCounter = document.getElementById('album-image-counter');
+	albumCounter.getElementsByTagName('span')[0].innerHTML = 1;
+	albumCounter.getElementsByTagName('span')[1].innerHTML = album.files.length;
+
 	container.innerHTML = "";
 	document.getElementById('album-screen').style.display = "block";
 	display.index = 0;
