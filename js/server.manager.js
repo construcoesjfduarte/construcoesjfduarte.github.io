@@ -1,9 +1,14 @@
+let server = "http://localhost:3000/api";
+// let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
+
+
 let ready = {
 	page: false,
 	server: false
 }
 
 let display = {
+	album: null,
 	max: 0,
 	index: 0
 }
@@ -28,6 +33,9 @@ function displayNext(){
 		container.getElementsByTagName('img')[++display.index].classList.toggle("hidden");
 		let albumCounter = document.getElementById('album-image-counter');
 		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
+		const avgRating = display.album.files[display.index].rating;
+		const userRating = display.album.files[display.index].ratingUser;
+		updateRatingDisplay(avgRating, userRating);
 	}
 
 }
@@ -40,6 +48,9 @@ function displayLast(){
 		container.getElementsByTagName('img')[--display.index].classList.toggle("hidden");
 		let albumCounter = document.getElementById('album-image-counter');
 		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
+		const avgRating = display.album.files[display.index].rating;
+		const userRating = display.album.files[display.index].ratingUser;
+		updateRatingDisplay(avgRating, userRating);
 	}
 
 }
@@ -112,6 +123,77 @@ function swipeHandler(_el,d) {
 
 }
 
+function ratePhoto(albumID, photoID, rate){
+	$.ajax({
+		url: server + "/albuns/"+albumID+"/photos/"+photoID+"/rating/"+rate,
+		type: "POST",
+		data: {},
+		dataType: "json",
+		success: function(_data) {
+			//console.log(data);
+		},
+		error: function(_data){
+			//console.error(data);
+		}
+	});
+}
+
+
+function updateRatingDisplay(avgRating, userRating ){
+
+	let ratingContainer = document.getElementById('album-rating');
+	
+	// Update avg rating
+	let avgRatingContainer = ratingContainer.getElementsByClassName('album-rating-avg')[0];
+	avgRatingContainer.innerHTML = avgRating.toFixed(2);
+
+	// Update user rating
+	let userRatingContainer = ratingContainer.getElementsByClassName('stars')[0];
+	userRatingContainer.innerHTML = "";
+	
+	for(let i=0; i<5; i++){
+		let star = document.createElement("i");
+		star.classList.add('fa-star', 'star');
+		
+		
+		star.addEventListener('click', function(){
+			const rate = 5-i;
+			let file = display.album.files[display.index];
+			let rating = 0;
+
+			if(file.ratingUser === 0){
+				// new rate
+				rating = (file.nrVotes * file.rating + rate)/ (file.nrVotes + 1);
+				file.nrVotes++;
+			}
+			else {
+				// update rate
+				rating = (file.nrVotes * file.rating - file.ratingUser + rate) / file.nrVotes;
+			}
+
+			file.rating = rating;
+			file.ratingUser = rate;
+			//const rating = (file.nrVotes * file.rating - file. + rate) / file.nrVotes;
+
+			updateRatingDisplay(rating, rate);
+			ratePhoto(display.album.id, file.id, rate);
+
+
+
+		})
+		
+		if(i < 5-userRating){
+			star.classList.add('far');
+		}
+		else {
+			star.classList.add('fas');
+		}
+
+		userRatingContainer.appendChild(star);
+	}
+
+}
+
 
 function showAlbum(album){
 	let container = document.getElementById('album-image-display-container');
@@ -119,6 +201,8 @@ function showAlbum(album){
 	albumCounter.getElementsByTagName('span')[0].innerHTML = 1;
 	albumCounter.getElementsByTagName('span')[1].innerHTML = album.files.length;
 
+
+	display.album = album;
 	container.innerHTML = "";
 	document.getElementById('album-screen').style.display = "block";
 	display.index = 0;
@@ -133,6 +217,8 @@ function showAlbum(album){
 	});
 
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
+
+	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);
 }
 
 
@@ -199,8 +285,7 @@ window.onload = function(){
  */
 function getAlbunsFromServer(){
 	$.ajax({
-		// url: "http://localhost:3000/api/albuns",
-		url: "https://contrucoes-jf-duarte.herokuapp.com/api/albuns",
+		url: server + "/albuns",
 		type: "GET",
 		data: {},
 		dataType: "json",
