@@ -434,36 +434,57 @@ section .contacts .contacts-card #mailForm textarea{
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, .99);
+    background-color: rgba(0, 0, 0, .8);
     z-index: 9999;
 }
 
-.album-screen .album-close{
+.album-screen .album-screen-back{
     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    display: block;
+}
+
+.album-screen .album-close{
+    position: absolute;
     top: 15px;
-    right: 20px;
-    color: rgba(255, 255, 255, 0.3);
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.075);
+    color: rgba(255, 255, 255, 0.25);
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.album-screen .album-close i{
+    position: absolute;
+    top: 5px;
+    left: 8px;
 }
 
 .album-screen .album-close:hover{
-    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .album-screen .album-image-display{
     position: fixed;
-    top: 50%;
+    top: calc(50% - 36px);
     left: 50%;
     transform: translate(-50%,-50%);
-    max-width: 70vw;
-    max-height: 70vh;
+    max-width: calc(100vw - 80px);
+    max-height: calc(100vh - 36px);
 }
 
 .album-screen .album-image-counter{
     position: fixed;
     top:30px;
-    left: 20px;
+    left: 5px;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     transform: translatey(-50%);
@@ -471,7 +492,7 @@ section .contacts .contacts-card #mailForm textarea{
 
 .album-screen .album-rating{
     position: fixed;
-    bottom: 5%;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -506,21 +527,32 @@ section .contacts .contacts-card #mailForm textarea{
 
 .album-screen .album-arrow{
     position: absolute;
-    top: 50%;
+    top: calc(50% - 36px);
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 19px;
+    background-color: rgba(255, 255, 255, 0.075);
+    font-size: 20px;
     cursor: pointer;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.25);
+    width: 30px;
+    height: 30px;
+}
+
+.album-screen .album-arrow i{
+    position: absolute;
+    left: 6px;
+    top: 5px;
 }
 
 .album-screen .album-arrow:hover{
-    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .album-screen .album-arrow#album-arrow-last{
-    transform: translateX(calc(-100% - 5px));
+    left: 5px;
 }
 
 .album-screen .album-arrow#album-arrow-next{
-    transform: translateX(5px);
+    right: 5px;
 }

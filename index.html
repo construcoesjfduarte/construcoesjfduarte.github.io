@@ -147,9 +147,13 @@
     </div>
 
     <div id="album-screen" class="album-screen">
+        <div class="album-screen-back">
+            
+        </div>
+
         <div class="album-close" onclick="this.parentNode.style.display = 'none'; document.body.classList.toggle('not-ready');
         document.getElementById('album-arrow-next').classList.add('hidden');document.getElementById('album-arrow-last').classList.add('hidden');">
-            <i class="fas fa-times-circle"></i>
+            <i class="fas fa-times"></i>
         </div>
 
         <div class="album-image-counter" id="album-image-counter">
@@ -159,11 +163,11 @@
         <div id="album-image-display-container"></div>
 
         <div id="album-arrow-last" class="album-arrow">
-            <i class="fas fa-arrow-alt-circle-left"></i>
+            <i class="fas fa-arrow-left"></i>
         </div>
 
         <div id="album-arrow-next" class="album-arrow">
-            <i class="fas fa-arrow-alt-circle-right"></i>
+            <i class="fas fa-arrow-right"></i>
         </div>
 
 

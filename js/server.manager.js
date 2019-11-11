@@ -21,6 +21,9 @@ function setPageReady(){
 	document.getElementById("loader").classList.toggle("hidden");
 }
 
+/**
+ * Returns true if the album display is visible and false otherwise
+ */
 function isDisplayingAlbum(){
 	return document.getElementById('album-screen').style.display === 'block';
 }
@@ -36,7 +39,7 @@ function displayNext(){
 		const avgRating = display.album.files[display.index].rating;
 		const userRating = display.album.files[display.index].ratingUser;
 		updateRatingDisplay(avgRating, userRating);
-		updateArrowsPosition();
+		updateArrows();
 	}
 
 }
@@ -52,7 +55,7 @@ function displayLast(){
 		const avgRating = display.album.files[display.index].rating;
 		const userRating = display.album.files[display.index].ratingUser;
 		updateRatingDisplay(avgRating, userRating);
-		updateArrowsPosition();
+		updateArrows();
 	}
 
 }
@@ -196,14 +199,7 @@ function updateRatingDisplay(avgRating, userRating ){
 
 }
 
-function updateArrowsPosition(){
-
-	const imageContainer = document.getElementById("album-image-display-container");
-	const image = imageContainer.getElementsByClassName("album-image-display")[display.index];
-	const boundaries = image.getBoundingClientRect();
-	const x = boundaries.x;
-	const x1 = x + boundaries.width;
-
+function updateArrows(){
 	// Update left
 	let arrowLeft = document.getElementById("album-arrow-last");
 	if(display.index === 0){
@@ -211,17 +207,15 @@ function updateArrowsPosition(){
 	}
 	else {
 		arrowLeft.classList.remove("hidden");
-		arrowLeft.style.left = x + "px";
 	}
 
-	// Update left
+	// Update right
 	let arrowRight = document.getElementById("album-arrow-next");
 	if(display.index === display.max){
 		arrowRight.classList.add("hidden");
 	}
 	else{
 		arrowRight.classList.remove("hidden");
-		arrowRight.style.left= x1 + "px";
 	}
 }
 
@@ -250,7 +244,7 @@ function showAlbum(album){
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
 
 	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);
-	container.getElementsByTagName('img')[0].addEventListener('load', updateArrowsPosition);
+	updateArrows();
 }
 
 
