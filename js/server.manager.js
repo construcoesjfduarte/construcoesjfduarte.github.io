@@ -1,5 +1,5 @@
-let server = "http://localhost:3000/api";
-// let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
+// let server = "http://localhost:3000/api";
+let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
 
 
 let ready = {
