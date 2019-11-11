@@ -67,7 +67,15 @@ document.getElementById("about-link").addEventListener('click', function(event){
 /**
  * Portfolio link event listener. Scroll to portefolioPage on click (with animation)
  */
-document.getElementById("portefolio-link").addEventListener('click', function(event){
+document.getElementById("portfolio-link").addEventListener('click', function(event){
     event.preventDefault();
     scrollTo($("#portefolio").offset().top);
+});
+
+/**
+ * Portfolio link event listener. Scroll to portefolioPage on click (with animation)
+ */
+document.getElementById("contacts-link").addEventListener('click', function(event){
+    event.preventDefault();
+    scrollTo($("#contactos").offset().top);
 });

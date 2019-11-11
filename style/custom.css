@@ -318,12 +318,13 @@ section .portefolio .album .album-name{
     color: white;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-transform: capitalize;
 
 }
 
 section .contacts{
     width: 100%;
-    background-color: var(--color-4);
+    background-color: var(--black);
     margin: 0 !important;
     min-height: 100vh;
 }
@@ -441,13 +442,13 @@ section .contacts .contacts-card #mailForm textarea{
     position: fixed;
     top: 15px;
     right: 20px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     font-size: 30px;
 }
 
 .album-screen .album-close:hover{
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .album-screen .album-image-display{
@@ -508,7 +509,8 @@ section .contacts .contacts-card #mailForm textarea{
     top: 50%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.4);
-    font-size: 15px;
+    font-size: 19px;
+    cursor: pointer;
 }
 
 .album-screen .album-arrow:hover{

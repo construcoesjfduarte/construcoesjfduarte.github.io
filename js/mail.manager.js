@@ -11,10 +11,9 @@ document.getElementById("mailForm").addEventListener('submit', function(event){
 });
 
 
-
 function sendMail(name, email, content){
     $.ajax({
-        url: "http://localhost:3000/api/emails/send",
+        url: server + "emails/send",
         type: "POST",
         data: {name: name, email: email, content},
         dataType: "json",
