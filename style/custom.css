@@ -484,11 +484,10 @@ section .contacts .contacts-card #mailForm textarea{
 
 .album-screen .album-image-counter{
     position: fixed;
-    top:30px;
+    top:20px;
     left: 5px;
-    font-size: 14px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.8);
-    transform: translatey(-50%);
 }
 
 .album-screen .album-rating{
