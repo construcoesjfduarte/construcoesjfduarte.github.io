@@ -278,7 +278,7 @@ section .portefolio p{
 }
 
 section .portefolio .album{
-    padding: 5px;
+    padding: 10px 5px;
 }
 
 section .portefolio .crop-image-1-1{
@@ -312,14 +312,14 @@ section .portefolio .album .album-image{
 section .portefolio .album .album-name{
     position: absolute;
     margin: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     background-color: var(--color-2);
-    padding: 5px 10px; 
+    padding: 5px; 
     color: white;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
     text-transform: capitalize;
 
 }
