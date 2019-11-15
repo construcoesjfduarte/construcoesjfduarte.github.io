@@ -274,6 +274,7 @@ section .portefolio{
 
 section .portefolio p{
     padding: 0 5px;
+    text-align: left;
 }
 
 section .portefolio .album{
@@ -285,13 +286,13 @@ section .portefolio .crop-image-1-1{
     padding-top: 100%;
     position: relative;
     cursor: pointer;
-    -webkit-filter: grayscale(100%) contrast(110%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%) contrast(110%); 
     filter: grayscale(100%) contrast(110%);
     
 }
 
 section .portefolio .crop-image-1-1:hover{
-    -webkit-filter: initial; /* Safari 6.0 - 9.0 */
+    -webkit-filter: initial;
     filter: initial;
 }
 
@@ -314,7 +315,7 @@ section .portefolio .album .album-name{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: var(--color-2);
     padding: 5px 10px; 
     color: white;
     white-space: nowrap;
@@ -475,7 +476,7 @@ section .contacts .contacts-card #mailForm textarea{
 
 .album-screen .album-image-display{
     position: fixed;
-    top: calc(50% - 36px);
+    top: calc(50% - 40px);
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: calc(100vw - 80px);
@@ -508,6 +509,7 @@ section .contacts .contacts-card #mailForm textarea{
     cursor: pointer;
     color: #ced7db;
     position: relative;
+    font-size: 20px;
 }
 
 .album-screen .album-rating .stars .star:hover ,
@@ -519,7 +521,7 @@ section .contacts .contacts-card #mailForm textarea{
 .album-screen .album-rating .album-rating-avg{
     position: absolute;
     color: #ced7db;
-    font-size: 12px;
+    font-size: 13px;
     padding-left: 6px;
     display: inline-block;
     top: 0px;
@@ -527,7 +529,7 @@ section .contacts .contacts-card #mailForm textarea{
 
 .album-screen .album-arrow{
     position: absolute;
-    top: calc(50% - 36px);
+    top: calc(50% - 40px);
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.075);
     font-size: 20px;
