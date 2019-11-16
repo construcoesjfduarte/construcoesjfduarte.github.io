@@ -42,7 +42,7 @@
     <!-- Custom js-->
     <script src="./js/server.manager.js"></script>
     <script src="./js/animations.js" defer></script>
-    <!-- <script src="./js/mail.manager.js" defer></script> -->
+    <script src="./js/mail.manager.js" defer></script>
 
 </head>
 <body class="not-ready">
@@ -117,21 +117,36 @@
         </div>
         
         <div class="contacts" id="contactos">
-            <!-- <div class="row justify-content-center">
-                <div class="col-10 col-md-8 col-lg-8 contacts-card">
-                    <form id="mailForm">
-                        <label for="name">Nome </label>
-                        <input id="mailName" type="text" name="name" value=""><br>
-                        <label for="email">Email </label>
-                        <input id="mailEmail" type="email" name="email" value=""><br>
-                        <label for="content">Conteúdo </label><br>
-                        <textarea id="mailContent" name="content" form="mailForm" placeholder="Escreva a sua mensagem" rows="5"></textarea>
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8 col-lg-6">
+                    <div class="contacts-card">
+                        <div class="row justify-content-around">
+                            <div class="col-12 col-md-6 contacts-image">
+                                <img src="./images/emai.png" alt="Símbolo email">
+                            </div>
+                            <div class="col-12 col-md-6 send-mail">
+                                <h4>Contacte-nos</h4>
 
-                        <input type="submit" value="Enviar">
-                        
-                    </form>
+                                <form id="emailForm" class="text-center">
+                                    <input type="text" name="name" id="emailName" placeholder="Nome" required>
+                                    <input type="email" name="email" id="emailFrom" placeholder="Email" required>
+                                    <input type="text" name="subject" id="emailSubject" placeholder="Assunto" required>
+                                    <textarea  name="content" id="emailContent" form="emailForm" placeholder="Escreva a sua mensagem" rows="6"></textarea>
+                                    <br>
+                                    <button type="submit">Enviar</button>
+                                </form>
+
+                            </div>
+                
+                        </div>
+
+                        <div class="show-more">
+                            <i class="fas fa-angle-double-right"></i>
+                        </div>
+
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         </div>

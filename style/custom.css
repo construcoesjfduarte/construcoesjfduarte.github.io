@@ -2,8 +2,8 @@
     --black: rgb(50, 50, 50);
     --color-1: #AD9480;
     --color-2: #E3B23C;
-    --color-3: #50514F;
-    --color-4: #CBD4C2;
+    --color-3: #b48c30;
+    --color-4: #59b24b;
     --color-5: #FDFCFF;
 }
 
@@ -327,46 +327,101 @@ section .portefolio .album .album-name{
 section .contacts{
     width: 100%;
     background-color: var(--black);
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     margin: 0 !important;
     min-height: 100vh;
 }
 
-section .contacts .mapouter iframe{
-    height: 400px;
-    width: 100%;
+@media screen and (max-width: 767px){
+    section .contacts{
+        padding: 96px 0 ;
+    }
+}
+
+@media screen and (min-width: 768px){
+    section .contacts > div{
+        height: 100%;
+    }
+    
+    section .contacts > div > div{
+        margin: auto;
+    }
 }
 
 section .contacts .contacts-card{
-    background-color: white;
-    padding: 30px;
-    border-radius: .8rem;
-}
-
-section .contacts .contacts-card #mailForm label{
-    padding-right: 10px;
-}
-
-section .contacts .contacts-card #mailForm input{
-    width: 300px;
-    margin-bottom: 20px;
-    border-radius: .8rem;
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-section .contacts .contacts-card #mailForm textarea{
     width: 100%;
-    margin-bottom: 20px;
-    border-radius: .8rem;
-    border: 1px solid black;
+    background-color: white;
+    border-radius: .5rem;
+    position: relative;
+}
+
+section .contacts .contacts-image{
+    padding: 30px;
+    display: flex;
+}
+
+section .contacts .contacts-image img{
+    width: 60%;
+    margin: auto;
+}
+
+section .contacts .send-mail h4{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 40px;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+section .contacts .send-mail form input,
+section .contacts .send-mail form textarea{
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: .5rem;
+    margin-bottom: 10px;
     padding: 5px 10px;
+    width: 90%;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section .contacts .send-mail button{
+    padding: 5px 20px;
+    font-size: 13px;
+    border-radius: .5rem;
+    background-color: var(--color-2);
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    border: 0;
+    margin-bottom: 30px;
 
 }
 
-@media screen and (max-width: 767px){
-    section .contacts .contacts-card #mailForm input{
-        width: 100%;
-    }
+section .contacts .send-mail button:hover{
+    background-color: var(--color-3);
+}
+
+section .contacts .show-more{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-2);
+    color: white;
+    border-radius: 50%;
+    font-weight: 15px;
+    cursor: pointer;
+}
+
+section .contacts .show-more:hover{
+    background-color: var(--color-3);
+}
+
+section .contacts .show-more i{
+    position: absolute;
+    left: 5px;
+    top: 5px;
 }
 
 /* LOADER */

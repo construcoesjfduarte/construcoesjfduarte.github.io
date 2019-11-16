@@ -1,12 +1,13 @@
-document.getElementById("mailForm").addEventListener('submit', function(event){
+document.getElementById("emailForm").addEventListener('submit', function(event){
     event.preventDefault();
     console.log("Submit catched");
-    const name = document.getElementById("mailName").value;
-    const email = document.getElementById("mailEmail").value;
-    const content = document.getElementById("mailContent").value;
+    const name = document.getElementById("emailName").value;
+    const email = document.getElementById("emailFrom").value;
+    const subject = document.getElementById("emailSubject").value;
+    const content = document.getElementById("emailContent").value;
 
     console.log({name, email, content});
-    sendMail(name, email, content);
+    // sendMail(name, email, content);
 
 });
 
