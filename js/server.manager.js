@@ -1,5 +1,5 @@
-let server = "http://localhost:3000/api";
-// let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
+// let server = "http://localhost:3000/api";
+let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
 
 
 let ready = {
@@ -263,7 +263,10 @@ function displayAlbuns(data){
 				index = k;
 			}
 		}
-		data.albuns[i].files.splice(index, 1);
+
+		if( index !== -1){
+			data.albuns[i].files.splice(index, 1);
+		}
 	}
 
 	data.albuns.forEach(album => {

@@ -401,6 +401,44 @@ section .contacts .send-mail button:hover{
     background-color: var(--color-3);
 }
 
+section .contacts .send-mail > div {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+section .contacts .send-mail p{
+    font-size: 13px;
+}
+
+section .contacts .send-mail p > span{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+section .contacts .send-mail p.social{
+    margin-bottom: 5px;
+}
+
+section .contacts .send-mail p > a{
+    text-decoration: none;
+}
+
+section .contacts .send-mail p > a > i{
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--color-2);
+}
+
+section .contacts .send-mail p > a:hover > i{
+    color: var(--color-3);
+}
+
+section .contacts .send-mail p:last-child{
+    margin-bottom: 30px;
+}
+
 section .contacts .show-more{
     position: absolute;
     top: 10px;

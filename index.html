@@ -119,7 +119,7 @@
         <div class="contacts" id="contactos">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-8 col-lg-6">
-                    <div class="contacts-card">
+                    <div class="contacts-card" id="contacts-card-1">
                         <div class="row justify-content-around">
                             <div class="col-12 col-md-6 contacts-image">
                                 <img src="./images/emai.png" alt="Símbolo email">
@@ -140,11 +140,47 @@
                 
                         </div>
 
-                        <div class="show-more">
+                        <div class="show-more" onclick="document.getElementById('contacts-card-1').classList.toggle('hidden');
+                        document.getElementById('contacts-card-2').classList.toggle('hidden');">
                             <i class="fas fa-angle-double-right"></i>
                         </div>
-
                     </div>
+
+                    <div class="contacts-card hidden" id="contacts-card-2">
+                        <div class="row justify-content-around">
+                            <div class="col-12 col-md-6 contacts-image">
+                                <img src="./images/emai.png" alt="Símbolo email">
+                            </div>
+                            <div class="col-12 col-md-6 send-mail">
+                                <h4>Contacte-nos</h4>
+
+                                <div>
+                                    <p><span>Telemóvel 1: </span>XXX XXX XXX</p>
+
+                                    <p><span>Telemóvel 2: </span>XXX XXX XXX</p>
+        
+                                    <p class="social"><span>Redes sociais:</span></p>
+
+                                    <p class="text-center ">
+                                        <a href="https://www.facebook.com/profile.php?id=100011008272418" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+                
+                        </div>
+
+                        <div class="show-more" onclick="document.getElementById('contacts-card-2').classList.toggle('hidden');
+                        document.getElementById('contacts-card-1').classList.toggle('hidden');">
+                            <i class="fas fa-angle-double-left"></i>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
