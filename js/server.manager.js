@@ -272,10 +272,8 @@ function displayAlbuns(data){
 	data.albuns.forEach(album => {
 		if(album.cover != null && album.files.length > 0){
 			let albumC = document.createElement("div");
-			albumC.classList.add("album", "col-6", "col-md-6", "col-lg-6");
-			albumC.addEventListener('click', function(){
-				showAlbum(album);
-			}, false)
+			albumC.classList.add("album", "col-12", "col-md-4", "col-lg-3");
+
 				
 			let square = document.createElement("div");
 			square.classList.add("crop-image-1-1");
@@ -287,6 +285,9 @@ function displayAlbuns(data){
 	
 			let name = document.createElement("p");
 			name.classList.add("album-name");
+			name.addEventListener('click', function(){
+				showAlbum(album);
+			}, false);
 			name.textContent = album.name;
 	
 			square.appendChild(cover);
