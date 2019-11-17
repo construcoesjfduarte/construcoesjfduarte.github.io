@@ -283,13 +283,28 @@ function displayAlbuns(data){
 
 			cover.src = album.cover;
 	
-			let name = document.createElement("p");
+			let name = document.createElement("div");
 			name.classList.add("album-name");
-			name.addEventListener('click', function(){
+			
+			let nameClick = document.createElement("div");
+			nameClick.classList.add("album-name-click");
+			nameClick.addEventListener('click', function(){
 				showAlbum(album);
 			}, false);
-			name.textContent = album.name;
-	
+
+			let nameP = document.createElement("p");
+			nameP.textContent = album.name;
+
+			let showMore = document.createElement("p");
+			showMore.classList.add("show-more");
+			showMore.textContent = "Ver mais";
+			showMore.addEventListener('click', function(){
+				showAlbum(album);
+			}, false);
+			
+			name.appendChild(nameClick);
+			name.appendChild(nameP);
+			name.appendChild(showMore);
 			square.appendChild(cover);
 			square.appendChild(name);
 			albumC.appendChild(square);

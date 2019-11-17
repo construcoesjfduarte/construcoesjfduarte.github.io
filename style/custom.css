@@ -218,7 +218,7 @@ main .home-front {
 section{
     background-color: var(--color-5);
     /* background-color: whitesmoke; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Muli', sans-serif;
 }
 
 section .row{
@@ -291,7 +291,6 @@ section .portefolio .crop-image-1-1{
     width: 100%;
     padding-top: 100%;
     position: relative;
-    cursor: pointer;
     border-radius: .5rem;
     overflow: hidden;
     
@@ -307,7 +306,7 @@ section .portefolio .album .album-image{
     width: 100%;
     overflow: hidden;
     object-fit: cover;
-    cursor: pointer;
+
 }
 
 section .portefolio .album .album-name{
@@ -320,24 +319,62 @@ section .portefolio .album .album-name{
     top: 0;
     background-color: rgba(227, 177, 60, .8);
     padding: 5px; 
+}
+
+section .portefolio .album .album-name .album-name-click{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section .portefolio .album .album-name .show-more{
     color: white;
-    text-transform: capitalize;
-    text-align: center;
-    padding-top: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    text-transform: unset;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+section .portefolio .album .album-name .show-more:hover{
+    text-decoration: underline;
 }
 
 
+@media screen and (min-width: 768px){
+    section .portefolio .album .album-name .show-more{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    section .portefolio .album .album-name .album-name-click{
+        display: none;
+    }
+}
+
+section .portefolio .album .album-name p{
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
 
 section .portefolio .crop-image-1-1:hover .album-name, 
 section .portefolio .crop-image-1-1:focus .album-name {
-    display: block;
-    line-height: 100%;
+    display: flex;
+    vertical-align: middle;
 }
 
 section .contacts{
     width: 100%;
     background-color: var(--black);
-    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     margin: 0 !important;
     min-height: 100vh;
 }
@@ -392,7 +429,24 @@ section .contacts .send-mail form textarea{
     padding: 5px 10px;
     width: 90%;
     font-size: 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Muli', sans-serif;
+}
+
+section .contacts .send-mail form input,
+section .contacts .send-mail form textarea{
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: .5rem;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    width: 90%;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+}
+
+section .contacts .send-mail form input::placeholder,
+section .contacts .send-mail form textarea::placeholder{
+    color: #bebebe;
 }
 
 section .contacts .send-mail button{
