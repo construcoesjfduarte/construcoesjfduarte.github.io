@@ -1,9 +1,9 @@
 :root {
     --black: rgb(50, 50, 50);
+    --white: rgba(255, 255, 255, 0.85);
     --color-1: #AD9480;
-    --color-2: #E3B23C;
+    --color-2:  black;
     --color-3: #b48c30;
-    --color-4: #59b24b;
     --color-5: #FDFCFF;
 }
 
@@ -37,7 +37,7 @@ body.not-ready{
 
 .navbar{
     background-color: transparent;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 .navbar .back-nav{
@@ -97,12 +97,12 @@ body.not-ready{
 
 .navbar button.navbar-toggler{
     border: 0;
-    background: rgba(0,0,0,.7);
-	border-radius:50%;
 	position: relative;
   	padding:10px;
-	cursor:pointer;
+    cursor:pointer;
+    
 }
+
 
 .navbar button.navbar-toggler > .circle {
 	width:20px;
@@ -115,7 +115,7 @@ body.not-ready{
 	position: absolute;
 	height: 3px;
 	width:100%;
-	background:white;
+	background: black;
 	border-radius:8px;
     left:0
 }
@@ -157,6 +157,8 @@ main .home{
     background-position: center;
     background-image: url("../images/slider.jpg") !important; 
     z-index: -30;
+    filter: saturate(0.8);
+
 }
 
 main .title-wrapper{
@@ -206,7 +208,9 @@ main .home-front {
     z-index: -10;
     -webkit-transform:translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    filter: saturate(0.9);
 }
+
 
 
 @media screen and (max-width: 767px){
@@ -216,8 +220,6 @@ main .home-front {
 }
 
 section{
-    background-color: var(--color-5);
-    /* background-color: whitesmoke; */
     font-family: 'Muli', sans-serif;
 }
 
@@ -258,17 +260,33 @@ section .about{
 section .about h1,
 section .portefolio h1{
     font-family: 'Ubuntu', sans-serif;
-    color: var(--black);
     margin-bottom: 30px;
 }
+
+section .about h1{
+    color: var(--white);
+}
+
+section .portefolio h1{
+    color: var(--black);
+}
+
 
 section .about p,
 section .portefolio p{
     text-align: justify;
     word-wrap: break-word;
-    color: var(--black);
     font-family: 'Red Hat Display', sans-serif;
 }
+
+section .about p{
+    color: var(--white);
+}
+
+section .portefolio p{
+    color: var(--black);
+}
+
 
 section .portefolio{
     width: 100%;
@@ -317,7 +335,7 @@ section .portefolio .album .album-name{
     left: 0;
     right: 0;
     top: 0;
-    background-color: rgba(227, 177, 60, .8);
+    background-color: rgba(0, 0, 0, .8);
     padding: 5px; 
 }
 
@@ -645,7 +663,7 @@ section .contacts .show-more i{
     top:20px;
     left: 5px;
     font-size: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--white);
 }
 
 .album-screen .album-rating{
@@ -672,7 +690,7 @@ section .contacts .show-more i{
 .album-screen .album-rating .stars .star:hover ,
 .album-screen .album-rating .star:hover ~ .star
 {
-    color: #fff176;
+    color: #81d4fa;
 }
 
 .album-screen .album-rating .album-rating-avg{
