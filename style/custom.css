@@ -179,7 +179,7 @@ main .title-wrapper{
     width: 100vw;
     padding: 0;
     z-index: -20;
-    -webkit-transform:translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0); 
     transform: translate3d(0,0,0);
     
 }
@@ -434,7 +434,7 @@ section .contacts .contacts-left{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/contacts.jpg") !important;
+    background-image: url("../images/contacts.webp") !important;
     display: flex;
     align-items: center;
 }
