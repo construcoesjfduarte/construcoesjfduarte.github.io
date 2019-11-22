@@ -78,5 +78,5 @@ document.getElementById("portfolio-link").addEventListener('click', function(eve
  */
 document.getElementById("contacts-link").addEventListener('click', function(event){
     event.preventDefault();
-    scrollTo($("#contactos").offset().top);
+    scrollTo($("#contactos").offset().top + 5);
 });
