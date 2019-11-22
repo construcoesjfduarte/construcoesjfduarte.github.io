@@ -1,5 +1,5 @@
-// let server = "http://localhost:3000/api";
-let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
+let server = "http://localhost:3000/api";
+// let server = "https://contrucoes-jf-duarte.herokuapp.com/api";
 
 
 let ready = {
@@ -272,7 +272,7 @@ function displayAlbuns(data){
 	data.albuns.forEach(album => {
 		if(album.cover != null && album.files.length > 0){
 			let albumC = document.createElement("div");
-			albumC.classList.add("album", "col-12", "col-md-4", "col-lg-3");
+			albumC.classList.add("album", "col-12", "col-sm-6", "col-md-4", "col-lg-3");
 
 				
 			let square = document.createElement("div");

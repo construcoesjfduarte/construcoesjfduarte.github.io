@@ -3,8 +3,8 @@
     --white: rgba(255, 255, 255, 0.85);
     --color-1: #AD9480;
     --color-2:  black;
-    --color-3: #b48c30;
-    --color-5: #FDFCFF;
+    --color-3: #4CAF50;
+    --color-4: #F44336;
 }
 
 *{
@@ -103,7 +103,6 @@ body.not-ready{
     
 }
 
-
 .navbar button.navbar-toggler > .circle {
 	width:20px;
 	height:20px;
@@ -115,9 +114,17 @@ body.not-ready{
 	position: absolute;
 	height: 3px;
 	width:100%;
-	background: black;
+	
 	border-radius:8px;
     left:0
+}
+
+.navbar:not(.solid):not(.open) button.navbar-toggler > .circle .line{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.navbar.solid button.navbar-toggler > .circle .line, .navbar.open button.navbar-toggler > .circle .line{
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar button.navbar-toggler > .circle .line.top {
@@ -221,6 +228,7 @@ main .home-front {
 
 section{
     font-family: 'Muli', sans-serif;
+    background-color: white;
 }
 
 section .row{
@@ -392,7 +400,7 @@ section .portefolio .crop-image-1-1:focus .album-name {
 
 section .contacts{
     width: 100%;
-    background-color: var(--black);
+    background-color: black;
     margin: 0 !important;
     min-height: 100vh;
 }
@@ -418,17 +426,44 @@ section .contacts .contacts-card{
     background-color: white;
     border-radius: .5rem;
     position: relative;
+    overflow: hidden;
 }
 
-section .contacts .contacts-image{
-    padding: 30px;
+section .contacts .contacts-left{
+    /* display: relative; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/contacts.jpg") !important;
     display: flex;
+    align-items: center;
 }
 
-section .contacts .contacts-image img{
-    width: 60%;
-    margin: auto;
+section .contacts .contacts-left > .mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, .7);
 }
+
+section .contacts .contacts-left > .contacts-container {
+    padding: 20px 40px;
+    color: var(--black);
+    margin: 0 auto;
+    z-index: 9999999;
+}
+
+section .contacts .contacts-left > .contacts-container > .contact-option i{
+    margin-right: 10px;
+    opacity: .8;
+}
+
+section .contacts .contacts-left > .contacts-container .contact-option:last-child{
+    margin-bottom: 0;
+}
+
 
 section .contacts .send-mail h4{
     text-align: center;
@@ -480,68 +515,8 @@ section .contacts .send-mail button{
 }
 
 section .contacts .send-mail button:hover{
-    background-color: var(--color-3);
-}
-
-section .contacts .send-mail > div {
-    width: 90%;
-    display: block;
-    margin: auto;
-}
-
-section .contacts .send-mail p{
-    font-size: 13px;
-}
-
-section .contacts .send-mail p > span{
-    font-weight: bold;
-    padding-right: 5px;
-}
-
-section .contacts .send-mail p.social{
-    margin-bottom: 5px;
-}
-
-section .contacts .send-mail p > a{
-    text-decoration: none;
-}
-
-section .contacts .send-mail p > a > i{
-    font-size: 25px;
-    cursor: pointer;
-    padding: 5px;
-    color: var(--color-2);
-}
-
-section .contacts .send-mail p > a:hover > i{
-    color: var(--color-3);
-}
-
-section .contacts .send-mail p:last-child{
-    margin-bottom: 30px;
-}
-
-section .contacts .show-more{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    height: 25px;
-    width: 25px;
-    background-color: var(--color-2);
-    color: white;
-    border-radius: 50%;
-    font-weight: 15px;
-    cursor: pointer;
-}
-
-section .contacts .show-more:hover{
-    background-color: var(--color-3);
-}
-
-section .contacts .show-more i{
-    position: absolute;
-    left: 5px;
-    top: 5px;
+    opacity: .8;
+    transform: scale(1.01);
 }
 
 /* LOADER */
@@ -555,7 +530,7 @@ section .contacts .show-more i{
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 378454649856895;
+    z-index: 99999999;
 }
 
 .lds-facebook {
@@ -732,4 +707,73 @@ section .contacts .show-more i{
 
 .album-screen .album-arrow#album-arrow-next{
     right: 5px;
+}
+
+.notifications-panel{
+    position: fixed;
+    top: 60px;
+    right: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.notifications-panel > .notification{
+    position: relative;
+    z-index: 87538583;
+    background-color: #b48c30;
+    border-radius: .25rem;
+    padding: 10px 20px 10px 10px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+    animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+}
+
+.notifications-panel > .notification.success{
+    background-color: var(--color-3);
+    color: white;
+}
+
+.notifications-panel > .notification.failure{
+    background-color: var(--color-4);
+    color: white;
+}
+
+.notifications-panel > .notification > .notification-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transform: translateX(-50%);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.notifications-panel > .notification > .notification-close:hover{
+    opacity: .7;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }

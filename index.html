@@ -21,7 +21,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/favicon-16x16.png"/>
     <link rel="manifest" href="./images/logo/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="./images/logo/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Frameworks -->
@@ -30,7 +30,6 @@
     <script src="./frameworks/popper.min.js"></script>
     <script src="./frameworks/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./frameworks/fontawesome/css/all.css" />
-
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
@@ -82,8 +81,8 @@
 
 
     <main id="inicio">
-        <div class="home"></div>
-        <div class="home-front"></div>
+        <div class="home" id="home"></div>
+        <div class="home-front" id="home-front"></div>
 
         <div class="title-wrapper">
             <h1 class="title">Contruções<br>J.F. Duarte</h1>
@@ -118,11 +117,18 @@
         
         <div class="contacts" id="contactos">
             <div class="row justify-content-center">
-                <div class="col-10 col-md-8 col-lg-6">
+                <div class="col-10 col-md-8 col-lg-8">
                     <div class="contacts-card" id="contacts-card-1">
                         <div class="row justify-content-around">
-                            <div class="col-12 col-md-6 contacts-image">
-                                <img src="./images/emai.png" alt="Símbolo email">
+                            <div class="col-12 col-md-6 contacts-left">
+                                <div class="mask"></div>
+                                <div class="contacts-container">
+                                    <p class="contact-option"><i class="fas fa-home"></i>Braga, Portugal</p>                                    
+                                    <p class="contact-option"><i class="fas fa-phone"></i>932 815 958</p>
+                                    <p class="contact-option"><i class="fas fa-phone"></i>911 815 958</p>
+                                    <p class="contact-option"><i class="fas fa-inbox"></i>email@email.pt</p>
+
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 send-mail">
                                 <h4>Contacte-nos</h4>
@@ -131,7 +137,7 @@
                                     <input type="text" name="name" id="emailName" placeholder="Nome" required>
                                     <input type="email" name="email" id="emailFrom" placeholder="Email" required>
                                     <input type="text" name="subject" id="emailSubject" placeholder="Assunto" required>
-                                    <textarea  name="content" id="emailContent" form="emailForm" placeholder="Escreva a sua mensagem" rows="6"></textarea>
+                                    <textarea  name="content" id="emailContent" form="emailForm" placeholder="Escreva a sua mensagem" rows="6" required></textarea>
                                     <br>
                                     <button type="submit">Enviar</button>
                                 </form>
@@ -140,47 +146,7 @@
                 
                         </div>
 
-                        <div class="show-more" onclick="document.getElementById('contacts-card-1').classList.toggle('hidden');
-                        document.getElementById('contacts-card-2').classList.toggle('hidden');">
-                            <i class="fas fa-angle-double-right"></i>
-                        </div>
                     </div>
-
-                    <div class="contacts-card hidden" id="contacts-card-2">
-                        <div class="row justify-content-around">
-                            <div class="col-12 col-md-6 contacts-image">
-                                <img src="./images/emai.png" alt="Símbolo email">
-                            </div>
-                            <div class="col-12 col-md-6 send-mail">
-                                <h4>Contacte-nos</h4>
-
-                                <div>
-                                    <p><span>Telemóvel 1: </span>XXX XXX XXX</p>
-
-                                    <p><span>Telemóvel 2: </span>XXX XXX XXX</p>
-        
-                                    <p class="social"><span>Redes sociais:</span></p>
-
-                                    <p class="text-center ">
-                                        <a href="https://www.facebook.com/profile.php?id=100011008272418" target="_blank"><i class="fab fa-facebook"></i></a>
-                                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-
-                                    </p>
-
-                                </div>
-
-
-                            </div>
-                
-                        </div>
-
-                        <div class="show-more" onclick="document.getElementById('contacts-card-2').classList.toggle('hidden');
-                        document.getElementById('contacts-card-1').classList.toggle('hidden');">
-                            <i class="fas fa-angle-double-left"></i>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
@@ -229,6 +195,10 @@
         </div>
         
     </div>
+
+    <div id="notifications-panel" class="notifications-panel col-8 col-sm-6 col-md-4 col-lg-3"></div>
+
+
 
 </body>
 </html>

@@ -38,6 +38,7 @@ window.addEventListener('scroll', function(_event){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = true;
     }
+
 });
 
 /**
