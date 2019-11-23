@@ -724,7 +724,7 @@ section .contacts .send-mail button:hover{
 
 .notifications-panel > .notification{
     position: relative;
-    z-index: 875389999583;
+    z-index: 9999999999999999;
     background-color: #b48c30;
     border-radius: .25rem;
     padding: 10px 20px 10px 10px;
