@@ -2,7 +2,7 @@
     --black: rgb(50, 50, 50);
     --white: rgba(255, 255, 255, 0.85);
     --color-1: #AD9480;
-    --color-2:  black;
+    --color-2: black;
     --color-3: #4CAF50;
     --color-4: #F44336;
 }
@@ -38,7 +38,6 @@ body.not-ready{
 .navbar{
     background-color: transparent;
     font-family: 'Muli', sans-serif;
-    font-display: swap;
 }
 
 .navbar .back-nav{
@@ -60,7 +59,6 @@ body.not-ready{
 .navbar .navbar-brand,
 .navbar.open .navbar-brand:focus{
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     color: rgba(255, 255, 255, .4);
 }
 
@@ -71,7 +69,6 @@ body.not-ready{
 .navbar.solid .navbar-brand, 
 .navbar.solid .navbar-brand:focus{
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     color: rgba(0, 0, 0, .4);
 }
 
@@ -195,7 +192,6 @@ main .title-wrapper > .title{
     text-align: center;
     font-size: 11.5vw;
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     font-weight: 700;
     opacity: 1;
     color: #ad9480;
@@ -272,7 +268,6 @@ section .about{
 section .about h1,
 section .portefolio h1{
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     margin-bottom: 30px;
 }
 
@@ -478,7 +473,6 @@ section .contacts .contacts-left > .contacts-container .contact-option:last-chil
 section .contacts .send-mail h4{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     padding-top: 40px;
     font-size: 14px;
     padding-bottom: 20px;
@@ -519,7 +513,6 @@ section .contacts .send-mail button{
     border-radius: .5rem;
     background-color: var(--color-2);
     font-family: 'Ubuntu', sans-serif;
-    font-display: swap;
     color: white;
     border: 0;
     margin-bottom: 30px;
