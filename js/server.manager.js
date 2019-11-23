@@ -1,5 +1,5 @@
 const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
-let serverIndex = 0;
+let serverIndex = 1;
 
 
 let handleErrors = {
