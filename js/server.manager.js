@@ -15,13 +15,7 @@ let display = {
 	index: 0
 }
 
-/**
- * Removes the initial loading page
- */
-function setPageReady(){
-	document.body.classList.toggle("not-ready");
-	document.getElementById("loader").remove();
-}
+
 
 /**
  * Returns true if the album display is visible and false otherwise
@@ -323,22 +317,6 @@ function displayAlbuns(data){
 }
 
 /**
- * Window listener. Sets the page as ready
- */
-window.onload = function(){
-	setPageReady();
-	detectswipe('album-screen',swipeHandler);
-	
-	document.getElementById("album-arrow-last").addEventListener('click', function(){
-		displayLast();
-	});
-
-	document.getElementById("album-arrow-next").addEventListener('click', function(){
-		displayNext();
-	});	
-}
-
-/**
  * Sends a request for the server, asking the information about the albuns
  */
 function getAlbunsFromServer(){
@@ -372,3 +350,12 @@ function getAlbunsFromServer(){
 }
 
 getAlbunsFromServer();
+detectswipe('album-screen',swipeHandler);
+
+document.getElementById("album-arrow-last").addEventListener('click', function(){
+	displayLast();
+});
+
+document.getElementById("album-arrow-next").addEventListener('click', function(){
+	displayNext();
+});	

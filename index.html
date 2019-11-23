@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="./style/custom.css" />
 
     <!-- Custom js-->
-    <script src="./js/server.manager.js"></script>
+    <script src="./js/server.manager.js" defer></script>
     <script src="./js/animations.js" defer></script>
     <script src="./js/mail.manager.js" defer></script>
 
@@ -205,7 +205,16 @@
 
     <div id="notifications-panel" class="notifications-panel col-8 col-sm-6 col-md-4 col-lg-3"></div>
 
+    <script>
 
+        window.onload = function(){
+            document.body.classList.toggle("not-ready");
+	        document.getElementById("loader").remove();
+        }
+
+    
+    
+    </script>
 
 </body>
 </html>
