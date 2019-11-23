@@ -163,7 +163,7 @@ main .home{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/slider.webp") !important; 
+    background-image: url("../images/slider.jpg") !important; 
     z-index: -30;
     filter: saturate(0.8);
 
@@ -451,7 +451,7 @@ section .contacts .contacts-left > .mask {
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .85);
 }
 
 section .contacts .contacts-left > .contacts-container {
