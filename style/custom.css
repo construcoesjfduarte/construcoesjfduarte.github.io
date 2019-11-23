@@ -587,7 +587,7 @@ section .contacts .send-mail button:hover{
     bottom: 0;
     top: 0;
     background-color: rgba(0, 0, 0, .8);
-    z-index: 9999;
+    z-index: 9999999;
 }
 
 .album-screen .album-screen-back{
@@ -719,7 +719,7 @@ section .contacts .send-mail button:hover{
 
 .notifications-panel > .notification{
     position: relative;
-    z-index: 87538583;
+    z-index: 875389999583;
     background-color: #b48c30;
     border-radius: .25rem;
     padding: 10px 20px 10px 10px;

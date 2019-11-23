@@ -280,7 +280,6 @@ function displayAlbuns(data){
 				
 			let cover = document.createElement("img");
 			cover.classList.add("album-image");
-
 			cover.src = album.cover;
 	
 			let name = document.createElement("div");
