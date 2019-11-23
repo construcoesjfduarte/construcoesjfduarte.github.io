@@ -452,7 +452,7 @@ section .contacts .contacts-left > .contacts-container {
     padding: 20px 40px;
     color: var(--black);
     margin: 0 auto;
-    z-index: 9999999;
+    z-index: 10;
 }
 
 section .contacts .contacts-left > .contacts-container > .contact-option i{
@@ -530,7 +530,7 @@ section .contacts .send-mail button:hover{
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 99999999;
+    z-index: 9999999999999999;
 }
 
 .lds-facebook {
