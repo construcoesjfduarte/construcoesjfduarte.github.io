@@ -162,7 +162,7 @@ main .home{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/slider.jpg") !important; 
+    background-image: url("../images/slider.webp") !important; 
     z-index: -30;
     filter: saturate(0.8);
 
