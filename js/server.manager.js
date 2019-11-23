@@ -1,6 +1,13 @@
-// let server = "http://localhost:3000/api";
-let server = "https://construcoesjfduarte.herokuapp.com/api";
+const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
+let serverIndex = 0;
 
+
+let handleErrors = {
+	connectionError: 0,
+	maxConnectionErrors: 3,
+	notReadyError: 0,
+	maxNotReadyErrors: 10
+};
 
 let ready = {
 	page: false,
@@ -18,7 +25,7 @@ let display = {
  */
 function setPageReady(){
 	document.body.classList.toggle("not-ready");
-	document.getElementById("loader").classList.toggle("hidden");
+	document.getElementById("loader").remove();
 }
 
 /**
@@ -130,7 +137,7 @@ function swipeHandler(_el,d) {
 
 function ratePhoto(albumID, photoID, rate){
 	$.ajax({
-		url: server + "/albuns/"+albumID+"/photos/"+photoID+"/rating/"+rate,
+		url: servers[serverIndex] + "/albuns/"+albumID+"/photos/"+photoID+"/rating/"+rate,
 		type: "POST",
 		data: {},
 		dataType: "json",
@@ -142,7 +149,6 @@ function ratePhoto(albumID, photoID, rate){
 		}
 	});
 }
-
 
 function updateRatingDisplay(avgRating, userRating ){
 
@@ -224,7 +230,7 @@ function showAlbum(album){
 	let container = document.getElementById('album-image-display-container');
 	let albumCounter = document.getElementById('album-image-counter');
 	albumCounter.getElementsByTagName('span')[0].innerHTML = 1;
-	albumCounter.getElementsByTagName('span')[1].innerHTML = album.files.length;
+	
 
 
 	display.album = album;
@@ -235,12 +241,20 @@ function showAlbum(album){
 	document.body.classList.toggle("not-ready");
 
 	album.files.forEach(file => {
-		let image = document.createElement("img");
-		image.classList.add('album-image-display', 'hidden');
-		image.src = file.link;
-		container.appendChild(image);
+
+		if(file.name.includes("capa")){
+			display.max--;
+		}
+		else {
+			let image = document.createElement("img");
+			image.classList.add('album-image-display', 'hidden');
+			image.src = file.link;
+			container.appendChild(image);
+		}
+
 	});
 
+	albumCounter.getElementsByTagName('span')[1].innerHTML = display.max;
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
 
 	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);
@@ -337,23 +351,38 @@ window.onload = function(){
  */
 function getAlbunsFromServer(){
 	$.ajax({
-		url: server + "/albuns",
+		url: servers[serverIndex] + "/albuns",
 		type: "GET",
 		data: {},
 		dataType: "json",
 		success: function(data) {
 			console.log(data);
-			
-			displayAlbuns(data);
-	
+			serverTries = 10;
+
 			ready.server = true;
 			if(ready.page && ready.server){
 				setPageReady();
 			}
+
+			displayAlbuns(data);
 	
 		},
-		error: function(data){
-			console.error(data);
+		error: function(data){			
+			switch(data.status){
+				case 501:
+					handleErrors.notReadyError++;
+					if(handleErrors.notReadyError < handleErrors.maxConnectionErrors){
+
+					}
+
+					console.log("error 501");
+
+
+					break;
+				case 0:
+					console.log("connection error")
+					break;		
+			}
 		}
 	});
 }
