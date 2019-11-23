@@ -9,11 +9,6 @@ let handleErrors = {
 	maxNotReadyErrors: 10
 };
 
-let ready = {
-	page: false,
-	server: false
-}
-
 let display = {
 	album: null,
 	max: 0,
@@ -268,6 +263,7 @@ function showAlbum(album){
  */
 function displayAlbuns(data){
 	let container = document.getElementById("albuns-container");
+	container.innerHTML = "";
 
 	for(let i=0; i<data.albuns.length; i++){
 		let index = -1;
@@ -330,11 +326,7 @@ function displayAlbuns(data){
  * Window listener. Sets the page as ready
  */
 window.onload = function(){
-	ready.page = true;
-
-	if(ready.page && ready.server){
-		setPageReady();
-	}
+	setPageReady();
 	detectswipe('album-screen',swipeHandler);
 	
 	document.getElementById("album-arrow-last").addEventListener('click', function(){
@@ -359,11 +351,6 @@ function getAlbunsFromServer(){
 			console.log(data);
 			serverTries = 10;
 
-			ready.server = true;
-			if(ready.page && ready.server){
-				setPageReady();
-			}
-
 			displayAlbuns(data);
 	
 		},
@@ -372,12 +359,9 @@ function getAlbunsFromServer(){
 				case 501:
 					handleErrors.notReadyError++;
 					if(handleErrors.notReadyError < handleErrors.maxConnectionErrors){
-
+						setTimeout(getAlbunsFromServer, 1000);
 					}
-
 					console.log("error 501");
-
-
 					break;
 				case 0:
 					console.log("connection error")

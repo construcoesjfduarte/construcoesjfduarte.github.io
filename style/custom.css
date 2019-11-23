@@ -304,6 +304,11 @@ section .portefolio{
     padding: 96px 0 ;
 }
 
+section .portefolio .waiting-status{
+    padding-top: 20vh;
+    margin: 0 auto; 
+}
+
 section .portefolio p{
     padding: 0 5px;
     text-align: left;
