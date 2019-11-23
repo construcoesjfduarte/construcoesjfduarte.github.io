@@ -1,5 +1,5 @@
 const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
-let serverIndex = 1;
+let serverIndex = 0;
 
 
 let handleErrors = {
@@ -220,8 +220,6 @@ function showAlbum(album){
 	let albumCounter = document.getElementById('album-image-counter');
 	albumCounter.getElementsByTagName('span')[0].innerHTML = 1;
 	
-
-
 	display.album = album;
 	container.innerHTML = "";
 	document.getElementById('album-screen').style.display = "block";
@@ -231,19 +229,14 @@ function showAlbum(album){
 
 	album.files.forEach(file => {
 
-		if(file.name.includes("capa")){
-			display.max--;
-		}
-		else {
-			let image = document.createElement("img");
-			image.classList.add('album-image-display', 'hidden');
-			image.src = file.link;
-			container.appendChild(image);
-		}
+		let image = document.createElement("img");
+		image.classList.add('album-image-display', 'hidden');
+		image.src = file.link;
+		container.appendChild(image);
 
 	});
 
-	albumCounter.getElementsByTagName('span')[1].innerHTML = display.max;
+	albumCounter.getElementsByTagName('span')[1].innerHTML = display.max + 1;
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
 
 	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);
@@ -316,6 +309,61 @@ function displayAlbuns(data){
 	});
 }
 
+function changeServer(){
+	if(serverIndex + 1 <  servers.length){
+		serverIndex++;
+		getAlbunsFromServer();
+	}
+	else {
+		// NENHUM server disponível
+		document.getElementById("portfolio-text").remove();
+		let container = document.getElementById("albuns-container");
+		container.innerHTML = "";
+
+		let content = document.createElement("p");
+		content.innerText = "Devido a uma falha na ligação com os nossos servidores, não é possível"
+		+ " a apresentação do portefólio.\n Por favor, tente novamente mais tarde.\n\n As nossas sinceras desculpas,\n";
+
+
+		let teamName = document.createElement("span");
+		teamName.innerText = "Construções JF Duarte";
+		teamName.style.fontWeight = "bold";
+		teamName.style.fontStyle = "italic";
+		
+		content.appendChild(teamName);
+		container.appendChild(content);
+
+		const container1 = document.getElementById("notifications-panel");
+    	let notification = document.createElement("div");
+		notification.classList.add("notification", "failure");
+		
+		let content1 = document.createElement("div");
+    	content1.classList.add("notification-content");
+    	let msg = "Falha ao ligar ao servidor. Algumas funções poderão estar indisponíveis de momento";
+		content1.textContent = msg;
+		
+		let close = document.createElement("div");
+		close.classList.add("notification-close");
+		close.addEventListener("click", function(){
+			notification.remove();
+		}, false);
+	
+		let closeI = document.createElement("i");
+		closeI.classList.add("fas", "fa-times");
+		close.appendChild(closeI);
+	
+		notification.appendChild(content1);
+		notification.appendChild(close);
+		container1.appendChild(notification);
+	
+	
+		setTimeout(function(){
+			notification.remove();
+		}, 6000);
+
+	}
+}
+
 /**
  * Sends a request for the server, asking the information about the albuns
  */
@@ -326,11 +374,7 @@ function getAlbunsFromServer(){
 		data: {},
 		dataType: "json",
 		success: function(data) {
-			console.log(data);
-			serverTries = 10;
-
 			displayAlbuns(data);
-	
 		},
 		error: function(data){			
 			switch(data.status){
@@ -339,10 +383,14 @@ function getAlbunsFromServer(){
 					if(handleErrors.notReadyError < handleErrors.maxConnectionErrors){
 						setTimeout(getAlbunsFromServer, 1000);
 					}
-					console.log("error 501");
+					else changeServer();
 					break;
 				case 0:
-					console.log("connection error")
+					handleErrors.connectionError++;
+					if(handleErrors.connectionError < handleErrors.maxConnectionErrors){
+						setTimeout(getAlbunsFromServer, 1000);
+					}
+					else changeServer();
 					break;		
 			}
 		}

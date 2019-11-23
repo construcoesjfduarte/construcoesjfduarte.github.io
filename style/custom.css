@@ -38,6 +38,7 @@ body.not-ready{
 .navbar{
     background-color: transparent;
     font-family: 'Muli', sans-serif;
+    z-index: 10000;
 }
 
 .navbar .back-nav{
@@ -457,7 +458,7 @@ section .contacts .contacts-left > .contacts-container {
     padding: 20px 40px;
     color: var(--black);
     margin: 0 auto;
-    z-index: 10;
+    z-index: 1;
 }
 
 section .contacts .contacts-left > .contacts-container > .contact-option i{
@@ -535,7 +536,7 @@ section .contacts .send-mail button:hover{
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 9999999999999999;
+    z-index: 100000;
 }
 
 .lds-facebook {
@@ -592,7 +593,7 @@ section .contacts .send-mail button:hover{
     bottom: 0;
     top: 0;
     background-color: rgba(0, 0, 0, .8);
-    z-index: 9999999;
+    z-index: 10000;
 }
 
 .album-screen .album-screen-back{
@@ -720,11 +721,11 @@ section .contacts .send-mail button:hover{
     right: 0;
     margin-left: 0;
     padding-left: 0;
+    z-index: 1000;
 }
 
 .notifications-panel > .notification{
     position: relative;
-    z-index: 9999999999999999;
     background-color: #b48c30;
     border-radius: .25rem;
     padding: 10px 20px 10px 10px;
