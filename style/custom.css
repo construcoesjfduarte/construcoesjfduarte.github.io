@@ -211,7 +211,7 @@ main .home-front {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/slider_front.png") !important;
+    background-image: url("../images/slider_front.webp") !important;
     z-index: -10;
     -webkit-transform:translate3d(0,0,0);
     transform: translate3d(0,0,0);
