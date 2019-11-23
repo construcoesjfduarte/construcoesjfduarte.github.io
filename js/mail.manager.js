@@ -41,7 +41,7 @@ function emailNotification(success){
 
 function sendMail(name, email, subject, content){
     $.ajax({
-        url: server + "/emails/send",
+        url: server[serverIndex] + "/emails/send",
         type: "POST",
         data: {name, email, subject, content},
         dataType: "json",
