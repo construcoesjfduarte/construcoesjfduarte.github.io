@@ -1,8 +1,6 @@
 let status = {
     navbarSolid: false,
-    scrollSpeed: 600,
-    lastScroll: 0,
-    animation: false
+    scrollSpeed: 600
 }
 
 let counter = 0;
@@ -12,14 +10,9 @@ let counter = 0;
  */
 function scrollTo(position){
 
-    status.animation = true;
-
     $('html,body').animate({
         scrollTop: position
-    }, status.scrollSpeed, function(){
-        status.animation = false;
-        document.body.classList.toggle("not-ready");
-    });
+    }, status.scrollSpeed);
 }
 
 /**
@@ -38,46 +31,14 @@ window.addEventListener('scroll', function(_event){
 
     let navbarHeight = document.getElementById("navbar").offsetHeight;
     
-    if(this.scrollY < this.innerHeight * 2 - navbarHeight && status.navbarSolid){
+    if(this.scrollY < this.innerHeight * 1.5 - navbarHeight && status.navbarSolid){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = false;
     }
-    else if(this.scrollY >= this.innerHeight * 2 - navbarHeight && !status.navbarSolid){
+    else if(this.scrollY >= this.innerHeight * 1.5 - navbarHeight && !status.navbarSolid){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = true;
     }
-
-    let top = this.innerHeight - this.scrollY;
-    top = (top <= 0) ? top : 0;
-    document.getElementById("home").style.top = top + "px";
-    document.getElementById("home-front").style.top = top + "px";
-
-    let percentage = (this.scrollY - this.innerHeight)  / ( this.innerHeight * 2);
-    percentage = (percentage > 1) ? 1 : (percentage < 0) ? 0 : percentage * 2.2;
-    document.getElementById("home-front").style.opacity = 1 - percentage;
-    document.getElementById("home").style.opacity = 1 - percentage;
-
-    if(!status.animation){
-        const delta = this.scrollY - status.lastScroll;
-        
-        const minScrollZone = this.innerHeight * 0.5;
-        const maxScrollZone = this.innerHeight * 1.5;
-
-        if(this.scrollY >= minScrollZone && this.scrollY < maxScrollZone){
-            if(delta > 0) {
-                scrollTo($("#sobre").offset().top);
-                // this.console.log("%c Scroll down", "color: green;")
-            }
-            else if(delta < 0) {
-                scrollTo(0);
-                // this.console.log("%c Scroll up", "color: red;")
-            }
-
-        }
-    }
-
-    status.lastScroll = this.scrollY;
-
 });
 
 /**

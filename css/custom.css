@@ -26,6 +26,7 @@
 
 html, body{
     margin: 0;
+    /* background-color: black; */
 }
 
 body.not-ready{
@@ -155,43 +156,32 @@ main#inicio{
     left: 0;
     top: 0;
     bottom: 0;
-    height: 200vh;
+    height: 150vh;
     width: 100vw;
     padding: 0;
 }
 
-main .home-background{
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: 0;
-    height: 200vh;
-    width: 100vw;
-    bottom: 0;
-    background-color: var(--color-2);
-    z-index: -30;
-}
 
 main .home{
-    position: fixed !important;
+    position: absolute !important;
     margin: 0;
     left: 0;
     top: 0;
     height: 0;
     bottom: 0;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -30;
+    background-attachment: fixed;
     filter: saturate(0.8);
 
 }
 
 main .title-wrapper{
-    position: relative !important;
+    position: absolute !important;
     margin: 0;
     left: 0;
     top: 0;
@@ -200,9 +190,9 @@ main .title-wrapper{
     height: 100vh;
     width: 100vw;
     padding: 0;
-    z-index: -20;
+    /* z-index: -20;
     -webkit-transform:translate3d(0,0,0); 
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0); */
     
 }
 
@@ -221,22 +211,37 @@ main .title-wrapper > .title{
 }
 
 main .home-front {
-    position: fixed !important;
+    position: absolute !important;
     margin: 0;
     left: 0;
     top: 0;
     height: 0;
     bottom: 0;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -10;
+    background-attachment: fixed;
+    /* z-index: -10;
     -webkit-transform:translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0); */
     filter: saturate(0.9);
+}
+
+main .home-curtain{
+    position: absolute !important;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    height: 0;
+    bottom: 0;
+    height: 150vh;
+    width: 100vw;
+    background-image: linear-gradient(to top, black 0%, transparent 75%);
+
 }
 
 @media screen and (max-width: 767px) {
@@ -274,6 +279,39 @@ main .home-front {
     }
 }
 
+
+@media screen and (max-width: 991px){
+    main#inicio{
+        background-image: linear-gradient(to top, black 0%, transparent 75%);
+    }
+    
+    main .home{
+        position: fixed !important;
+        height: 100vh;
+        z-index: -30;
+    }
+
+    main .title-wrapper{
+        position: relative !important;
+        z-index: -20;
+        -webkit-transform:translate3d(0,0,0); 
+        transform: translate3d(0,0,0);
+    }
+
+    main .home-front {
+        position: fixed !important;
+        z-index: -10;
+        height: 100vh;
+        -webkit-transform:translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    main .home-curtain{
+        display: none;
+    
+    }
+
+}
 
 section{
     font-family: 'Muli', sans-serif;
