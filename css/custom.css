@@ -26,7 +26,6 @@
 
 html, body{
     margin: 0;
-    /* background-color: black; */
 }
 
 body.not-ready{
@@ -541,7 +540,7 @@ section .contacts .contacts-left > .mask {
 }
 
 section .contacts .contacts-left > .contacts-container {
-    padding: 20px 40px;
+    padding: 30px 20px;
     color: var(--black);
     margin: 0 auto;
     z-index: 1;
@@ -554,8 +553,8 @@ section .contacts .contacts-left > .contacts-container > .contact-option i{
 
 section .contacts .contacts-left > .contacts-container .contact-option:last-child{
     margin-bottom: 0;
+    word-break: break-all;
 }
-
 
 section .contacts .send-mail h4{
     text-align: center;
