@@ -115,7 +115,6 @@ body.not-ready{
 	position: absolute;
 	height: 3px;
 	width:100%;
-	
 	border-radius:8px;
     left:0
 }
