@@ -1,9 +1,9 @@
 let status = {
     navbarSolid: false,
-    scrollSpeed: 600
+    scrollSpeed: 600,
+    counter: 0
 }
 
-let counter = 0;
 /**
  * Create scroll animation to the given position-y
  * @param {Number} position position-y to scroll to
@@ -31,11 +31,11 @@ window.addEventListener('scroll', function(_event){
 
     let navbarHeight = document.getElementById("navbar").offsetHeight;
     
-    if(this.scrollY < this.innerHeight * 1.3 - navbarHeight && status.navbarSolid){
+    if(this.scrollY < this.innerHeight * 1.5 - navbarHeight && status.navbarSolid){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = false;
     }
-    else if(this.scrollY >= this.innerHeight * 1.3   - navbarHeight && !status.navbarSolid){
+    else if(this.scrollY >= this.innerHeight * 1.5   - navbarHeight && !status.navbarSolid){
         document.getElementById("navbar").classList.toggle("solid");
         status.navbarSolid = true;
     }

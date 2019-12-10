@@ -1,5 +1,5 @@
 :root {
-    --black: rgb(50, 50, 50);
+    --black: rgb(24, 24, 24);
     --white: rgba(255, 255, 255, 0.85);
     --color-1: #AD9480;
     --color-2: black;
@@ -34,67 +34,60 @@ body.not-ready{
     background-color: white;
 }
 
-
 .navbar{
     background-color: transparent;
     font-family: 'Muli', sans-serif;
     z-index: 10000;
 }
 
-.navbar .back-nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    display: none;
-}
-
-.navbar.solid .back-nav, .navbar.open .back-nav{
-    display: block;
-}
-
 .navbar .navbar-brand,
-.navbar.open .navbar-brand:focus{
+.navbar .navbar-brand:focus{
     font-family: 'Ubuntu', sans-serif;
-    color: rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, .8);
 }
 
-.navbar .navbar-brand:not(.solid):hover{
-    color: rgba(255, 255, 255, .5);
+.navbar .navbar-brand:hover{
+    color: rgba(255, 255, 255, .8);
+    transform: scale(0.95);
 }
 
-.navbar.solid .navbar-brand, 
-.navbar.solid .navbar-brand:focus{
-    font-family: 'Ubuntu', sans-serif;
-    color: rgba(0, 0, 0, .4);
+.navbar .navbar-nav .nav-item .nav-link{
+    font-family: 'Muli', sans-serif;
+    color: rgba(255, 255, 255, .8);
 }
 
-.navbar.solid .navbar-brand:hover{
-    color: rgba(0, 0, 0, .6);
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: rgba(255, 255, 255, 1);
 }
+
 
 @media screen and (max-width: 991px) {
-    .navbar:not(.solid).open{
-        background: rgba(255,255,255,.4);
+    .navbar:not(.solid).open,
+    .navbar.transparent.open{
+        background-color: black !important;
     }
 
     .navbar.open .navbar-brand,
     .navbar.open .navbar-brand:focus{
-        color: rgba(0, 0, 0, .6);
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .navbar.open .navbar-brand:hover{
+        color: rgba(255, 255, 255, .8);
+        transform: scale(0.95);
     }
 }
 
 .navbar.solid{
-    background-color: rgba(255, 255, 255, .6);
-    -webkit-box-shadow: 0px 0px 2px 0px #00000040;
+    background-color: black;
+    /* -webkit-box-shadow: 0px 0px 2px 0px #00000040;
     -moz-box-shadow: 0px 0px 2px 0px #00000040;
-    box-shadow: 0px 0px 2px 0px #00000040;
+    box-shadow: 0px 0px 2px 0px #00000040; */
 }
 
+.navbar.solid.open{
+    border-bottom: 1px solid white;
+}
 
 .navbar button.navbar-toggler{
     border: 0;
@@ -120,11 +113,11 @@ body.not-ready{
 }
 
 .navbar:not(.solid):not(.open) button.navbar-toggler > .circle .line{
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .navbar.solid button.navbar-toggler > .circle .line, .navbar.open button.navbar-toggler > .circle .line{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .navbar button.navbar-toggler > .circle .line.top {
