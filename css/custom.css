@@ -62,9 +62,9 @@ body.not-ready{
 
 
 @media screen and (max-width: 991px) {
-    .navbar:not(.solid).open,
-    .navbar.transparent.open{
-        background-color: black !important;
+    .navbar.open{
+        /* background-color: black !important; */
+        background-image: linear-gradient(to bottom, black 90%, rgb(31, 31, 31) 100%);
     }
 
     .navbar.open .navbar-brand,
@@ -85,9 +85,9 @@ body.not-ready{
     box-shadow: 0px 0px 2px 0px #00000040; */
 }
 
-.navbar.solid.open{
+/* .navbar.solid.open{
     border-bottom: 1px solid white;
-}
+} */
 
 .navbar button.navbar-toggler{
     border: 0;
@@ -459,12 +459,44 @@ section .portefolio .album .album-name .show-more:hover{
     section .portefolio .album .album-name .show-more{
         display: none;
     }
+
+    section .portefolio .album .album-name .album-click-mobile{ 
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px){
     section .portefolio .album .album-name .album-name-click{
         display: none;
     }
+
+    section .portefolio .album .album-name .album-click-mobile{ 
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* background-color: #F44336; */
+        -webkit-animation-name: showFromBottom; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-fill-mode: forwards;
+        animation-name: showFromBottom;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes showFromBottom {
+    from {top: 100%;}
+    to {top: 0;}
+}
+  
+/* Standard syntax */
+@keyframes showFromBottom {
+    from {top: 100%;}
+    to {top: 0;}
 }
 
 section .portefolio .album .album-name p{

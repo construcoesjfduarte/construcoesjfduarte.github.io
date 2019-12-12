@@ -294,13 +294,17 @@ function displayAlbuns(data){
 			let showMore = document.createElement("p");
 			showMore.classList.add("show-more");
 			showMore.textContent = "Ver mais";
-			showMore.addEventListener('click', function(){
+
+			let clickMobile = document.createElement("div");
+			clickMobile.classList.add("album-click-mobile");
+			clickMobile.addEventListener('click', function(){
 				showAlbum(album);
 			}, false);
-			
+
 			name.appendChild(nameClick);
 			name.appendChild(nameP);
 			name.appendChild(showMore);
+			name.appendChild(clickMobile);
 			square.appendChild(cover);
 			square.appendChild(name);
 			albumC.appendChild(square);
