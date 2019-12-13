@@ -140,6 +140,7 @@ main#inicio{
     left: 0;
     top: 0;
     bottom: 0;
+    height: 150vh;
     width: 100vw;
     padding: 0;
 }
@@ -152,9 +153,11 @@ main .home{
     top: 0;
     height: 0;
     bottom: 0;
-    height: 150vh;
     width: 100vw;
     padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     filter: saturate(0.8);
 
 }
@@ -196,9 +199,11 @@ main .home-front {
     top: 0;
     height: 0;
     bottom: 0;
-
     width: 100vw;
     padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     /* z-index: -10;
     -webkit-transform:translate3d(0,0,0);
     transform: translate3d(0,0,0); */
@@ -288,7 +293,7 @@ main .home-curtain{
 
 }
 
-@media screen and (min-width: 991px){
+@media screen and (min-width: 992px){
     main .home{
         height: 150vh;
         background-size: cover;
@@ -297,13 +302,11 @@ main .home-curtain{
         background-attachment: fixed;
     }
 
-    main .home-front{
+    main .home-front {
         height: 150vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;   
+        background-attachment: fixed;
     }
+
 }
 
 section{
