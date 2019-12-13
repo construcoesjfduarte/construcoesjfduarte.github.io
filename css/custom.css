@@ -36,7 +36,7 @@ body.not-ready{
 
 .navbar{
     background-color: transparent;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Nunito', sans-serif;
     z-index: 10000;
 }
 
@@ -52,7 +52,7 @@ body.not-ready{
 }
 
 .navbar .navbar-nav .nav-item .nav-link{
-    font-family: 'Muli', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: rgba(255, 255, 255, .8);
 }
 
@@ -80,14 +80,7 @@ body.not-ready{
 
 .navbar.solid{
     background-color: black;
-    /* -webkit-box-shadow: 0px 0px 2px 0px #00000040;
-    -moz-box-shadow: 0px 0px 2px 0px #00000040;
-    box-shadow: 0px 0px 2px 0px #00000040; */
 }
-
-/* .navbar.solid.open{
-    border-bottom: 1px solid white;
-} */
 
 .navbar button.navbar-toggler{
     border: 0;
@@ -305,7 +298,7 @@ main .home-curtain{
 }
 
 section{
-    font-family: 'Muli', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: white;
 }
 
@@ -362,17 +355,17 @@ section .about p,
 section .portefolio p{
     text-align: justify;
     word-wrap: break-word;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Nunito', sans-serif; 
 }
 
 section .about p{
     color: var(--white);
+    word-wrap: break-word;
 }
 
 section .portefolio p{
     color: var(--black);
 }
-
 
 section .portefolio{
     width: 100%;
@@ -425,9 +418,15 @@ section .portefolio .album .album-name{
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
+    top: 100%;
     background-color: rgba(0, 0, 0, .8);
-    padding: 5px; 
+    padding: 5px;
+    -webkit-animation-name: showFromBottom; 
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: showFromBottom;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
 
 section .portefolio .album .album-name .album-name-click{
@@ -450,17 +449,10 @@ section .portefolio .album .album-name .show-more{
     cursor: pointer;
 }
 
-section .portefolio .album .album-name .show-more:hover{
-    text-decoration: underline;
-}
-
 
 @media screen and (min-width: 768px){
-    section .portefolio .album .album-name .show-more{
-        display: none;
-    }
-
-    section .portefolio .album .album-name .album-click-mobile{ 
+    section .portefolio .album .album-name .show-more,
+    section .portefolio .album .album-name .album-click-mobile{
         display: none;
     }
 }
@@ -476,9 +468,9 @@ section .portefolio .album .album-name .show-more:hover{
         bottom: 0;
         left: 0;
         right: 0;
-        /* background-color: #F44336; */
-        -webkit-animation-name: showFromBottom; /* Safari 4.0 - 8.0 */
-        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        cursor: pointer;
+        -webkit-animation-name: showFromBottom; 
+        -webkit-animation-duration: 1s;
         -webkit-animation-fill-mode: forwards;
         animation-name: showFromBottom;
         animation-duration: 1s;
@@ -487,13 +479,11 @@ section .portefolio .album .album-name .show-more:hover{
 
 }
 
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes showFromBottom {
     from {top: 100%;}
     to {top: 0;}
 }
-  
-/* Standard syntax */
+ 
 @keyframes showFromBottom {
     from {top: 100%;}
     to {top: 0;}
@@ -597,7 +587,7 @@ section .contacts .send-mail form textarea{
     padding: 5px 10px;
     width: 90%;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 section .contacts .send-mail form input,
@@ -609,7 +599,7 @@ section .contacts .send-mail form textarea{
     padding: 5px 10px;
     width: 90%;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 section .contacts .send-mail form input::placeholder,

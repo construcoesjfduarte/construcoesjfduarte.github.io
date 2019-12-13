@@ -10,9 +10,11 @@ let status = {
  */
 function scrollTo(position){
 
-    $('html,body').animate({
-        scrollTop: position
-    }, status.scrollSpeed);
+    if(position !== window.scrollY){
+        $('html,body').animate({
+            scrollTop: position
+        }, status.scrollSpeed);
+    }
 }
 
 /**
@@ -80,3 +82,19 @@ document.getElementById("contacts-link").addEventListener('click', function(even
     event.preventDefault();
     scrollTo($("#contactos").offset().top + 5);
 });
+
+
+/**
+ * Create page animation (only for show out)
+ */
+function createShowAnimation(){
+    
+    const finish = document.body.offsetHeight - window.innerHeight;
+    
+    $('html,body').animate({
+        scrollTop: finish
+    }, 10000);
+
+}
+
+//setTimeout(createShowAnimation, 30000);
