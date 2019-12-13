@@ -411,3 +411,4 @@ document.getElementById("album-arrow-last").addEventListener('click', function()
 document.getElementById("album-arrow-next").addEventListener('click', function(){
 	displayNext();
 });	
+
