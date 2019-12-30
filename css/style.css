@@ -1,0 +1,354 @@
+:root {
+    --black: rgb(24, 24, 24);
+    --white: rgba(255, 255, 255, 0.85);
+    --color-1: #AD9480;
+    --color-2: black;
+    --color-3: #4CAF50;
+    --color-4: #F44336;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.hidden{
+    display: none;
+}
+
+
+html, body{
+    margin: 0;
+}
+
+body.not-ready{
+    overflow: hidden;
+    margin: 0;
+    background-color: white;
+}
+
+.navbar{
+    background-color: transparent;
+    font-family: 'Muli', sans-serif;
+    z-index: 10000;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand:focus{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(255, 255, 255, .8);
+}
+
+.navbar .navbar-brand:hover{
+    color: rgba(255, 255, 255, .8);
+    transform: scale(0.95);
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+    font-family: 'Muli', sans-serif;
+    color: rgba(255, 255, 255, .8);
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media screen and (max-width: 991px) {
+    .navbar.open{
+        background-color: var(--color-1) !important;
+        /* background-image: linear-gradient(to bottom, black 90%, rgb(31, 31, 31) 100%); */
+    }
+
+    .navbar.open .navbar-brand,
+    .navbar.open .navbar-brand:focus{
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .navbar.open .navbar-brand:hover{
+        color: rgba(255, 255, 255, .8);
+        transform: scale(0.95);
+    }
+}
+
+.navbar.solid{
+    background-color: black;
+}
+
+.navbar button.navbar-toggler{
+    border: 0;
+	position: relative;
+  	padding:10px;
+    cursor:pointer;
+    
+}
+
+.navbar button.navbar-toggler > .circle {
+	width:20px;
+	height:20px;
+    position:relative;
+    margin: 0;
+}
+
+.navbar button.navbar-toggler > .circle .line {
+	position: absolute;
+	height: 3px;
+	width:100%;
+	border-radius:8px;
+    left:0
+}
+
+.navbar:not(.solid):not(.open) button.navbar-toggler > .circle .line{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar.solid button.navbar-toggler > .circle .line, .navbar.open button.navbar-toggler > .circle .line{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar button.navbar-toggler > .circle .line.top {
+	top:18%;
+}
+
+.navbar button.navbar-toggler > .circle .line.middle {
+	top:48%;
+}
+
+.navbar button.navbar-toggler > .circle .line.bottom {
+	top:78%;
+}
+
+.navbar button.navbar-toggler > .icon.close .top {
+	transform:rotate(45deg);
+	top:48%;
+}
+.navbar button.navbar-toggler > .icon.close .middle, .navbar button.navbar-toggler > .icon.close .bottom {
+	transform:rotate(-45deg);
+	top:48%;
+}
+
+main#inicio{
+    position: relative !important;
+    margin: 0;
+    padding: 0;
+    height: 150vh;
+    width: 100vw;
+}
+
+main .home{
+    margin: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .title-wrapper{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    height: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    
+}
+
+main .title-wrapper > .title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 11.5vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    opacity: 1;
+    color: #ad9480; 
+}
+
+main .home-front {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Small screen */
+@media screen and (max-width: 991px){
+    main#inicio{
+        background-image: linear-gradient(to top, black 0%, transparent 75%);
+    }
+    
+    main .home{
+        position: fixed !important;
+        height: 100vh;
+        z-index: -30;
+    }
+
+    main .title-wrapper{
+        z-index: -20;
+        -webkit-transform:translate3d(0,0,0); 
+        transform: translate3d(0,0,0);
+    }
+    
+
+    main .home-front {
+        position: fixed !important;
+        z-index: -10;
+        height: 100vh;
+        -webkit-transform:translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+   
+    main .home-curtain{
+        display: none;
+    } 
+
+}
+
+/* Bigger screen */
+@media screen and (min-width: 992px){
+    main .home{
+        position: absolute;
+        height: 150vh;
+        background-attachment: fixed;
+    }
+
+    main .home-front {
+        position: absolute !important;
+        height: 150vh;
+        background-attachment: fixed;
+    }
+
+    main .home-curtain{
+        position: absolute !important;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        height: 0;
+        bottom: 0;
+        height: 150vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, black 0%, transparent 75%);
+    
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    main .title-wrapper > .title{
+        font-size: 55px;
+    }
+
+    main .home{
+        background-image: url("../images/home/back_small.jpg");
+    }
+
+    main .home-front {
+        background-image: url("../images/home/front_small.png");
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    main .home{
+        background-image: url("../images/home/back_medium.jpg");
+    }
+    
+    main .home-front {
+        background-image: url("../images/home/front_medium.png");
+    }
+}
+
+@media screen and (min-width: 1200px){
+    main .home{
+        background-image: url("../images/home/back_large.jpg");
+    }
+    
+    main .home-front {
+        background-image: url("../images/home/front_large.png");
+    }
+}
+
+
+
+
+
+/* LOADER */
+.loader{
+    position: fixed;
+    width: 100vw; 
+    height: 100vh;
+    background-color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: white;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    } 
+}

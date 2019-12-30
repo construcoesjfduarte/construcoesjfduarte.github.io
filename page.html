@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Construções Duarte</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/logo/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/logo/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/logo/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/logo/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/logo/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/logo/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/logo/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/logo/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/logo/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/logo/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/favicon-16x16.png"/>
+    <link rel="manifest" href="./images/logo/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./images/logo/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Frameworks -->
+    <link rel="stylesheet" href="./frameworks/bootstrap.min.css" />
+    <script src="./frameworks/jquery-3.4.1.js" defer></script>
+    <script src="./frameworks/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="./frameworks/fontawesome/css/all.css"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Custom js-->
+    <script src="./js/server.manager.js" defer></script>
+    <script src="./js/animations.js" defer></script>
+    <script src="./js/mail.manager.js" defer></script>
+</head>
+<body class="not-ready">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light static-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="brand-link">
+                Contruções J.F. Duarte
+            </a>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="circle icon">
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio" id="home-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre" id="about-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portefolio" id="portfolio-link">Portefólio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos" id="contacts-link">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="inicio">
+        <div class="home" id="home"></div>
+
+        <div class="title-wrapper">
+            <h1 class="title">Contruções<br>J.F. Duarte</h1>
+        </div>
+
+        <div class="home-front" id="home-front"></div>
+
+        <div class="home-curtain"></div>
+    </main>
+
+
+    <div id="loader" class="loader">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            document.body.classList.toggle("not-ready");
+	        document.getElementById("loader").remove();
+        }
+    </script>
+
+    
+</body>
+</html>
