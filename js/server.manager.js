@@ -1,4 +1,5 @@
 const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
+// const servers = ["https://construcoesjfduarte.herokuapp.com/api"];
 let serverIndex = 0;
 
 

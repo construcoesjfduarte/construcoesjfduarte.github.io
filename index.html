@@ -42,7 +42,7 @@
     <!-- Custom js-->
     <script src="./js/server.manager.js" defer></script>
     <script src="./js/animations.js" defer></script>
-    <script src="./js/mail.manager.js" defer></script>
+    <!-- <script src="./js/mail.manager.js" defer></script> -->
 </head>
 <body class="not-ready">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light static-top fixed-top">
@@ -94,9 +94,18 @@
                 <div class="col-10 col-md-8 col-lg-8">
                     <h1>Contruções J.F. Duarte</h1>
                     <p>
-                        Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor de Latim no Colégio Hampden-Sydney, na Virgínia, procurou uma das palavras em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e atravessando as cidades do mundo na literatura clássica, descobriu a sua origem. Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC. Este livro é um tratado na teoria da ética, muito popular durante a Renascença. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit amet..." aparece de uma linha na secção 1.10.32.
-
-                        O pedaço mais habitual do Lorem Ipsum usado desde os anos 1500 é reproduzido abaixo para os interessados. As secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" do Cícero também estão reproduzidos na sua forma original, acompanhados pela sua tradução em Inglês, versões da tradução de 1914 por H. Rackham.
+                            A Construções J. F. Duarte é uma empresa do ramo da Construção Civil.</br>
+                            Apesar de ainda jovem, a sua história remonta à década de 80. Em
+                        1985, nasceu a Construções Duarte que foi fundada pelo pai do atual sócio-
+                        gerente da Construções J. F. Duarte, Jorge Duarte. Contamos, por isso com
+                        uma vasta experiência adquirida ao longo de mais de 30 anos.</br>
+                            A Construções J. F. Duarte dedica-se a todo o tipo de trabalhos de
+                        construção civil, nomeadamente, novas construções, restauros, acabamentos
+                        interiores e exteriores. Estamos habilitados para a execução de obras públicas
+                        e particulares. </br>
+                            Temos como objetivo encontrar sempre a melhor solução possível para
+                        cada caso, tendo em conta as necessidades e os sonhos dos nossos clientes,
+                        primando sempre pela qualidade dos nossos trabalhos.
                     </p>
                 </div>
             </div>
@@ -127,7 +136,7 @@
             </div>
         </div>
 
-        <div class="contacts" id="contactos">
+        <!-- <div class="contacts" id="contactos">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-8 col-lg-8">
                     <div class="contacts-card" id="contacts-card-1">
@@ -135,7 +144,6 @@
                             <div class="col-12 col-md-6 contacts-left">
                                 <div class="mask"></div>
                                 <div class="contacts-container text-center">
-                                    <!-- <img src="./images/logo.png" alt="logo"> -->
                                     <p class="contact-option"><i class="fas fa-home"></i>Braga, Portugal</p>
                                     <p class="contact-option"><i class="fas fa-hammer"></i>Barcelos, Braga, Portugal</p>                                    
                                     <p class="contact-option"><i class="fas fa-phone"></i>916 098 887</p>
@@ -144,6 +152,7 @@
                             </div>
                             <div class="col-12 col-md-6 send-mail">
                                 <h4>Contacte-nos</h4>
+                                <a href="tel:916098887">call</a>
 
                                 <form id="emailForm" class="text-center">
                                     <input type="text" name="name" id="emailName" placeholder="Nome" required>
@@ -153,6 +162,40 @@
                                     <br>
                                     <button type="submit">Enviar</button>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="contacts" id="contactos">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8 col-lg-8">
+                    <h1>Contactos</h1>
+                    <div class="row contacts-cards-container">
+                        <div class="col-12 col-md-6 contacts-card-out">
+                            <div class="contacts-card" onclick="$('#addressModal').modal('show')">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 contacts-card-out">
+                            <div class="contacts-card">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 contacts-card-out">
+                            <div class="contacts-card">
+                                <i class="fas fa-phone-alt"></i>
+                                <!-- <div>916 098 887</div> -->
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 contacts-card-out">
+                            <div class="contacts-card">
+                                <i class="fas fa-inbox"></i>
+                                <!-- <div>construcoesduart@gmail.pt</div> -->
                             </div>
                         </div>
                     </div>
@@ -191,6 +234,28 @@
         </div>
         
     </div>
+    
+    <!-- Modal Address -->
+    <div class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addressModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
 
 
     <div id="loader" class="loader">

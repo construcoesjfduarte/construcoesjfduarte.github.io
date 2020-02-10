@@ -341,6 +341,9 @@ section .about p{
     text-align: justify;
 }
 
+/* section .about p span{
+    padding-left: 2.5em;
+} */
 
 /* Portefolio */
 section .portefolio{
@@ -515,7 +518,41 @@ section .contacts{
     }
 }
 
-section .contacts .contacts-card{
+section .contacts h1{
+    color: var(--white);
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 30px;
+}
+
+section .contacts .contacts-cards-container .contacts-card-out{
+    padding: 10px;   
+}
+
+section .contacts .contacts-cards-container .contacts-card-out .contacts-card{
+    height: 120px;
+    background-color: var(--color-1);
+    border-radius: .5rem;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+section .contacts .contacts-cards-container .contacts-card-out .contacts-card:hover{
+    opacity: .9;
+
+}
+
+section .contacts .contacts-cards-container .contacts-card-out .contacts-card i{
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+/* section .contacts .contacts-card{
     width: 100%;
     background-color: white;
     border-radius: .5rem;
@@ -618,7 +655,7 @@ section .contacts .send-mail button{
 section .contacts .send-mail button:hover{
     opacity: .8;
     transform: scale(1.01);
-}
+} */
 
 /* LOADER */
 .loader{
@@ -849,4 +886,25 @@ section .contacts .send-mail button:hover{
 
 .notifications-panel > .notification > .notification-close:hover{
     opacity: .7;
+}
+
+
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+  
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; 
+}
+  
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
 }
