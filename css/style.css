@@ -329,6 +329,12 @@ section .about{
     }
 }
 
+@media screen and (min-width: 1200px){
+    section .about p{
+        font-size: 20px;
+    }
+}
+
 section .about h1{
     color: var(--white);
     font-family: 'Ubuntu', sans-serif;
@@ -340,6 +346,8 @@ section .about p{
     word-wrap: break-word;
     text-align: justify;
 }
+
+
 
 /* section .about p span{
     padding-left: 2.5em;
@@ -496,6 +504,7 @@ section .portefolio .crop-image-1-1:focus .album-name {
 
 /* Contacts */
 section .contacts{
+    position: relative;
     width: 100%;
     background-color: black;
     margin: 0 !important;
@@ -529,7 +538,7 @@ section .contacts .contacts-cards-container .contacts-card-out{
 }
 
 section .contacts .contacts-cards-container .contacts-card-out .contacts-card{
-    height: 120px;
+    height: 80px;
     background-color: var(--color-1);
     border-radius: .5rem;
     padding: 10px;
@@ -544,12 +553,35 @@ section .contacts .contacts-cards-container .contacts-card-out .contacts-card:ho
 }
 
 section .contacts .contacts-cards-container .contacts-card-out .contacts-card i{
-    font-size: 40px;
+    font-size: 25px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     color: white;
+}
+
+section .contacts .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-100%);
+    color: white;
+    height: 20px;
+    opacity: .3;
+    font-size: 13px;
+    background-color: black;
+}
+
+section .contacts .footer p{
+    padding: 0 20%;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px){
+    section .contacts .footer{
+        height: 30px;
+    }
 }
 
 /* section .contacts .contacts-card{
@@ -845,66 +877,76 @@ section .contacts .send-mail button:hover{
     right: 5px;
 }
 
-/* Notifications */
-.notifications-panel{
+
+.modal{
+    z-index: 100000000;
+    padding-top: 60px;
+}
+
+.modal-dialog{
     position: fixed;
-    top: 60px;
-    right: 0;
-    margin-left: 0;
-    padding-left: 0;
-    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) !important;
+    width: 90%;
+    margin: 0px;
 }
 
-.notifications-panel > .notification{
-    position: relative;
-    border-radius: .25rem;
-    padding: 20px 20px 20px 20px;
-    font-size: 12px;
-    margin-bottom: 5px;
-    -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
-    animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+.modal .modal-content{
+    background-color: transparent;
 }
 
-.notifications-panel > .notification.success{
-    background-color: var(--color-3);
+.modal .modal-content > .modal-header{
+    background-color: var(--color-1);
     color: white;
+} 
+
+.modal .modal-content > .modal-body{
+    background-color: white;
+    border: 0;
 }
 
-.notifications-panel > .notification.failure{
-    background-color: var(--color-4);
+.modal .modal-content > .modal-body span{
+    white-space:nowrap;
+}
+
+
+.modal .modal-content > .modal-body .social-row{
+    margin: 20px 0 10px 0;
+    font-size: 40px;
+}
+
+
+.modal .modal-content > .modal-body .social-row a{
+    color: var(--black);
+    opacity: .8;
+    text-decoration: none;
+}
+
+.modal .modal-content > .modal-body .social-row a:hover{
+    opacity: .9;
+}
+
+.modal .modal-content > .modal-body .contact-row{
+    margin: 20px 0 0 0;
+}
+
+
+.modal .modal-content > .modal-body .contact-us{
+    background-color: var(--black);
     color: white;
+    padding: 10px 0;
+    border-radius: .5rem;
+    opacity: .8;
+    text-decoration: none;
 }
 
-.notifications-panel > .notification > .notification-close{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    transform: translateX(-50%);
-    font-size: 15px;
-    cursor: pointer;
+.modal .modal-content > .modal-body .contact-us:hover{
+    opacity: .9;
 }
 
-.notifications-panel > .notification > .notification-close:hover{
-    opacity: .7;
+.modal .modal-content > .modal-footer{
+    background-color: white;
+    border: 0;
 }
 
-
-
-.modal {
-    text-align: center;
-    padding: 0!important;
-}
-  
-.modal:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px; 
-}
-  
-.modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-}

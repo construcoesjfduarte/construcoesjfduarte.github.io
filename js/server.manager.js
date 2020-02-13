@@ -1,5 +1,5 @@
-const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
-// const servers = ["https://construcoesjfduarte.herokuapp.com/api"];
+// const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
+const servers = ["https://construcoesjfduarte.herokuapp.com/api"];
 let serverIndex = 0;
 
 
@@ -337,35 +337,6 @@ function changeServer(){
 		
 		content.appendChild(teamName);
 		container.appendChild(content);
-
-		const container1 = document.getElementById("notifications-panel");
-    	let notification = document.createElement("div");
-		notification.classList.add("notification", "failure");
-		
-		let content1 = document.createElement("div");
-    	content1.classList.add("notification-content");
-    	let msg = "Falha ao ligar ao servidor. Algumas funções poderão estar indisponíveis de momento";
-		content1.textContent = msg;
-		
-		let close = document.createElement("div");
-		close.classList.add("notification-close");
-		close.addEventListener("click", function(){
-			notification.remove();
-		}, false);
-	
-		let closeI = document.createElement("i");
-		closeI.classList.add("fas", "fa-times");
-		close.appendChild(closeI);
-	
-		notification.appendChild(content1);
-		notification.appendChild(close);
-		container1.appendChild(notification);
-	
-	
-		setTimeout(function(){
-			notification.remove();
-		}, 6000);
-
 	}
 }
 
