@@ -139,7 +139,6 @@ function ratePhoto(albumID, photoID, rate){
 		}
 	});
 }
-
 function updateRatingDisplay(avgRating, userRating ){
 
 	let ratingContainer = document.getElementById('album-rating');
