@@ -16,8 +16,6 @@ let display = {
 	index: 0
 }
 
-
-
 /**
  * Returns true if the album display is visible and false otherwise
  */
@@ -31,8 +29,6 @@ function displayNext(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[++display.index].classList.toggle("hidden");
-		let albumCounter = document.getElementById('album-image-counter');
-		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
 		const avgRating = display.album.files[display.index].rating;
 		const userRating = display.album.files[display.index].ratingUser;
 		updateRatingDisplay(avgRating, userRating);
@@ -47,8 +43,6 @@ function displayLast(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[--display.index].classList.toggle("hidden");
-		let albumCounter = document.getElementById('album-image-counter');
-		albumCounter.getElementsByTagName('span')[0].innerHTML = display.index + 1;
 		const avgRating = display.album.files[display.index].rating;
 		const userRating = display.album.files[display.index].ratingUser;
 		updateRatingDisplay(avgRating, userRating);
@@ -139,6 +133,7 @@ function ratePhoto(albumID, photoID, rate){
 		}
 	});
 }
+
 function updateRatingDisplay(avgRating, userRating ){
 
 	let ratingContainer = document.getElementById('album-rating');
@@ -216,10 +211,7 @@ function updateArrows(){
 
 
 function showAlbum(album){
-	let container = document.getElementById('album-image-display-container');
-	let albumCounter = document.getElementById('album-image-counter');
-	albumCounter.getElementsByTagName('span')[0].innerHTML = 1;
-	
+	let container = document.getElementById('album-image-display-container');	
 	display.album = album;
 	container.innerHTML = "";
 	document.getElementById('album-screen').style.display = "block";
@@ -235,8 +227,6 @@ function showAlbum(album){
 		container.appendChild(image);
 
 	});
-
-	albumCounter.getElementsByTagName('span')[1].innerHTML = display.max + 1;
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
 
 	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);

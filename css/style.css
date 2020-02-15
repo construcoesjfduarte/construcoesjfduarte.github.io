@@ -331,7 +331,7 @@ section .about{
 
 @media screen and (min-width: 1200px){
     section .about p{
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -584,110 +584,6 @@ section .contacts .footer p{
     }
 }
 
-/* section .contacts .contacts-card{
-    width: 100%;
-    background-color: white;
-    border-radius: .5rem;
-    position: relative;
-    overflow: hidden;
-}
-
-section .contacts .contacts-left{
-    display: flex;
-    align-items: center;
-}
-
-section .contacts .contacts-left > .mask {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-section .contacts .contacts-left > .contacts-container {
-    padding: 30px 10px;
-    color: var(--black);
-    margin: 0 auto;
-    z-index: 1;
-}
-
-section .contacts .contacts-left > .contacts-container img{
-    width: 40%;
-    padding-bottom: 30px;
-}
-
-section .contacts .contacts-left > .contacts-container > .contact-option{
-    text-align: left;
-    margin-bottom: 8px;
-}
-
-section .contacts .contacts-left > .contacts-container > .contact-option i{
-    margin-right: 10px;
-    opacity: .8;
-    font-size: 20px;
-}
-
-section .contacts .contacts-left > .contacts-container .contact-option:last-child{
-    margin-bottom: 0;
-    word-break: break-all;
-}
-
-
-section .contacts .send-mail h4{
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding-top: 40px;
-    font-size: 14px;
-    padding-bottom: 20px;
-}
-
-section .contacts .send-mail form input,
-section .contacts .send-mail form textarea{
-    background-color: #f1f1f1;
-    border: 0;
-    border-radius: .5rem;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    width: 90%;
-    font-size: 14px;
-    font-family: 'Muli', sans-serif;
-}
-
-section .contacts .send-mail form input,
-section .contacts .send-mail form textarea{
-    background-color: #f1f1f1;
-    border: 0;
-    border-radius: .5rem;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    width: 90%;
-    font-size: 14px;
-    font-family: 'Muli', sans-serif;
-}
-
-section .contacts .send-mail form input::placeholder,
-section .contacts .send-mail form textarea::placeholder{
-    color: #bebebe;
-}
-
-section .contacts .send-mail button{
-    padding: 5px 20px;
-    font-size: 13px;
-    border-radius: .5rem;
-    background-color: var(--color-2);
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
-    border: 0;
-    margin-bottom: 30px;
-
-}
-
-section .contacts .send-mail button:hover{
-    opacity: .8;
-    transform: scale(1.01);
-} */
 
 /* LOADER */
 .loader{
@@ -795,26 +691,18 @@ section .contacts .send-mail button:hover{
 
 .album-screen .album-image-display{
     position: fixed;
-    top: calc(50% - 40px);
+    top: calc(50% + 40px);
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: calc(100vw - 80px);
     max-height: calc(100vh - 36px);
 }
 
-.album-screen .album-image-counter{
-    position: fixed;
-    top:20px;
-    left: 5px;
-    font-size: 10px;
-    color: var(--white);
-}
-
 .album-screen .album-rating{
     position: fixed;
-    bottom: 10px;
+    top: 10px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, 50%);
 }
 
 .album-screen .album-rating .stars{
