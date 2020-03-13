@@ -135,10 +135,10 @@ body.not-ready{
 
 main#inicio{
     position: relative !important;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     height: 150vh;
-    width: 100vw;
+    width: 100% !important;
 }
 
 main .home{
@@ -148,7 +148,7 @@ main .home{
     top: 0;
     bottom: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -162,7 +162,7 @@ main .title-wrapper{
     height: 0;
     bottom: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     
 }
@@ -187,7 +187,7 @@ main .home-front {
     bottom: 0;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -247,11 +247,12 @@ main .home-front {
         margin: 0;
         padding: 0;
         left: 0;
+        right: 0;
         top: 0;
         height: 0;
         bottom: 0;
         height: 150vh;
-        width: 100vw;
+        width: 100%;
         background-image: linear-gradient(to top, black 0%, transparent 75%);
     }
 }
