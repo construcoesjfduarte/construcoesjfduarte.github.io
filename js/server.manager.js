@@ -1,5 +1,5 @@
-// const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
-const servers = ["https://construcoesjfduarte.herokuapp.com/api"];
+const servers = ["http://localhost:3000/api", "https://construcoesjfduarte.herokuapp.com/api"];
+// const servers = ["https://construcoesjfduarte.herokuapp.com/api"];
 let serverIndex = 0;
 
 
@@ -16,6 +16,11 @@ let display = {
 	index: 0
 }
 
+let handleDoubleClick = {
+	lastClick: 0,
+	lastImageClicked: ""
+}
+
 /**
  * Returns true if the album display is visible and false otherwise
  */
@@ -29,9 +34,6 @@ function displayNext(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[++display.index].classList.toggle("hidden");
-		const avgRating = display.album.files[display.index].rating;
-		const userRating = display.album.files[display.index].ratingUser;
-		updateRatingDisplay(avgRating, userRating);
 		updateArrows();
 	}
 
@@ -43,9 +45,6 @@ function displayLast(){
 		container = document.getElementById('album-image-display-container');
 		container.getElementsByTagName('img')[display.index].classList.toggle("hidden");
 		container.getElementsByTagName('img')[--display.index].classList.toggle("hidden");
-		const avgRating = display.album.files[display.index].rating;
-		const userRating = display.album.files[display.index].ratingUser;
-		updateRatingDisplay(avgRating, userRating);
 		updateArrows();
 	}
 
@@ -119,75 +118,7 @@ function swipeHandler(_el,d) {
 
 }
 
-function ratePhoto(albumID, photoID, rate){
-	$.ajax({
-		url: servers[serverIndex] + "/albuns/"+albumID+"/photos/"+photoID+"/rating/"+rate,
-		type: "POST",
-		data: {},
-		dataType: "json",
-		success: function(_data) {
-			//console.log(data);
-		},
-		error: function(_data){
-			//console.error(data);
-		}
-	});
-}
 
-function updateRatingDisplay(avgRating, userRating ){
-
-	let ratingContainer = document.getElementById('album-rating');
-	
-	// Update avg rating
-	let avgRatingContainer = ratingContainer.getElementsByClassName('album-rating-avg')[0];
-	avgRatingContainer.innerHTML = avgRating.toFixed(2);
-
-	// Update user rating
-	let userRatingContainer = ratingContainer.getElementsByClassName('stars')[0];
-	userRatingContainer.innerHTML = "";
-	
-	for(let i=0; i<5; i++){
-		let star = document.createElement("i");
-		star.classList.add('fa-star', 'star');
-		
-		
-		star.addEventListener('click', function(){
-			const rate = 5-i;
-			let file = display.album.files[display.index];
-			let rating = 0;
-
-			if(file.ratingUser === 0){
-				// new rate
-				rating = (file.nrVotes * file.rating + rate)/ (file.nrVotes + 1);
-				file.nrVotes++;
-			}
-			else {
-				// update rate
-				rating = (file.nrVotes * file.rating - file.ratingUser + rate) / file.nrVotes;
-			}
-
-			file.rating = rating;
-			file.ratingUser = rate;
-			//const rating = (file.nrVotes * file.rating - file. + rate) / file.nrVotes;
-
-			updateRatingDisplay(rating, rate);
-			ratePhoto(display.album.id, file.id, rate);
-
-
-
-		})
-		
-		if(i < 5-userRating){
-			star.classList.add('far');
-		}
-		else {
-			star.classList.add('fas');
-		}
-
-		userRatingContainer.appendChild(star);
-	}
-
-}
 
 function updateArrows(){
 	// Update left
@@ -209,12 +140,12 @@ function updateArrows(){
 	}
 }
 
-
 function showAlbum(album){
 	let container = document.getElementById('album-image-display-container');	
 	display.album = album;
 	container.innerHTML = "";
 	document.getElementById('album-screen').style.display = "block";
+	document.getElementById('album-screen-top-name').innerHTML = album.name;
 	display.index = 0;
 	display.max = album.files.length - 1;
 	document.body.classList.toggle("not-ready");
@@ -229,7 +160,6 @@ function showAlbum(album){
 	});
 	container.getElementsByTagName('img')[0].classList.toggle("hidden");
 
-	updateRatingDisplay(album.files[0].rating, album.files[0].ratingUser);
 	updateArrows();
 }
 

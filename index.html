@@ -177,6 +177,14 @@
     <div id="album-screen" class="album-screen">
         <div class="album-screen-back"></div>
 
+
+        <div class="album-screen-top row justify-content-center">
+            <div class="col-10 text-center album-screen-top-name" id="album-screen-top-name">
+                Album name
+            </div>
+        
+        </div>
+
         <div class="album-close" onclick="this.parentNode.style.display = 'none'; document.body.classList.toggle('not-ready');
         document.getElementById('album-arrow-next').classList.add('hidden');document.getElementById('album-arrow-last').classList.add('hidden');">
             <i class="fas fa-times"></i>
@@ -192,11 +200,13 @@
             <i class="fas fa-arrow-right"></i>
         </div>
 
-        <div id="album-rating" class="album-rating">
+
+
+        <!-- <div id="album-rating" class="album-rating">
             <div class="stars">
             </div>
             <span class="album-rating-avg">0.00</span>
-        </div>
+        </div> -->
         
     </div>
     
