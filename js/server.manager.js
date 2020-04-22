@@ -16,11 +16,6 @@ let display = {
 	index: 0
 }
 
-let handleDoubleClick = {
-	lastClick: 0,
-	lastImageClicked: ""
-}
-
 /**
  * Returns true if the album display is visible and false otherwise
  */
@@ -258,6 +253,7 @@ function changeServer(){
 		container.appendChild(content);
 	}
 }
+
 
 /**
  * Sends a request for the server, asking the information about the albuns
