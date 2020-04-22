@@ -1,4 +1,5 @@
-const server = "http://localhost:3000/api";
+// const server = "http://localhost:3000/api";
+const server = "https://construcoesjfduarte.herokuapp.com/api";
 
 
 function handlerSubmission(){
