@@ -8,6 +8,13 @@
     box-shadow: none !important;
 }
 
+.hidden{
+    display: none !important;
+}
+
+body{
+    background-color: #AD9480;
+}
 
 /* LOADER */
 .loader{
@@ -86,13 +93,25 @@
     transform: translate(-50%,-50%);
 }
 
+@media screen and (max-width: 991px){
+    .login-page .login-card{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 80%;
+        max-width: 90%;
+        transform: translate(-50%,-50%);
+    }
+}
+
 .login-page .login-card > .login-card-header{
     border: 1px solid black;
     padding: 10px 20px;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
-    background-color: white;
+    background-color: black;
     font-weight: bolder;
+    color: white;
 }
 
 .login-page .login-card > .login-card-body{
@@ -104,26 +123,59 @@
     background-color: white;
 }
 
-.login-page .login-card > .login-card-body > span{
+.login-page .login-card > .login-card-body span{
     font-size: 12px;
 }
 
-.login-page .login-card > .login-card-body > input{
+.login-page .login-card > .login-card-body input{
     border: 1px solid black;
     margin: 10px 0;
     width: 100%;
 }
 
-.login-page .login-card > .login-card-body > button{
+.login-page .login-card > .login-card-body button{
     border: 1px solid black;
     margin: 0 0 20px 0;
     width: 100%;
 }
 
-.login-page .login-card > .login-card-body > button:hover{
+.login-page .login-card > .login-card-body button:hover{
     border: 1px solid black;
     background-color: black;
     color: white;
     margin: 0 0 20px 0;
     width: 100%;
 }
+
+.login-page .login-card > .login-card-body .waiting-status{
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.login-page .login-card > .login-card-body .updating{
+    padding: 20px;
+}
+
+.login-page .login-card > .login-card-body .updating span{
+    font-weight: bolder;
+    font-size: 16px;
+
+}
+
+.login-page .login-card > .login-card-body .updating p{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
+.login-page .login-card > p {
+    padding-top: 7px;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+.login-page .login-card > p > a{
+    color: black;
+}
+
