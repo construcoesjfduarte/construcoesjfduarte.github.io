@@ -1,28 +1,43 @@
-name: Deploy
+name: CI/CD
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    env: 
-      user_name: 'github-actions[bot]'
-      user_email: 'github-actions[bot]@users.noreply.github.com'
-      repository: ${{ github.repository }}
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: '14'
-          check-latest: true
-      - run: git config --global user.name $user_name
-      - run: git config --global user.email $user_email
-      - run: git remote set-url origin https://${{ env.ACTIONS_DEPLOY_ACCESS_TOKEN }}@github.com/${repository}
-      - run: rm -rf node_modules/
-      - run: npm install
-      - run: npm run build
-      - run: npm run deploy
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+        npm run deploy
+      env:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
+
