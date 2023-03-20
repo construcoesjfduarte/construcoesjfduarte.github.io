@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc7b5c5.css",
-    "main.js": "/static/js/main.2b109f62.js",
+    "main.js": "/static/js/main.93f26c24.js",
     "static/media/11_Madeiramento para telhado.jpg": "/static/media/11_Madeiramento para telhado.d693cc1dc03a2bf95d43.jpg",
     "static/media/04_Capoto.jpg": "/static/media/04_Capoto.55a1f7ba2a536b863f73.jpg",
     "static/media/15_Estrutura_fundações.jpg": "/static/media/15_Estrutura_fundações.c9016beea2e2c9cb3e31.jpg",
@@ -33,7 +33,6 @@
     "static/media/01_Capoto.jpg": "/static/media/01_Capoto.61fb6d8ef1f8d1a47a6a.jpg",
     "static/media/22_Tratamento de pedra de chão.jpg": "/static/media/22_Tratamento de pedra de chão.db0d547e5bfe1db33a51.jpg",
     "static/media/08_Revestimento de muro.jpg": "/static/media/08_Revestimento de muro.9277e2e970a9bc67e7a8.jpg",
-    "static/media/00_test.png": "/static/media/00_test.d79e0c0746ea6395d2d2.png",
     "static/media/11_Estrutura para restauro e limpeza de pedra.jpg": "/static/media/11_Estrutura para restauro e limpeza de pedra.6f756d3c32c14456c8fb.jpg",
     "static/media/21_Estrutura habitação_final de trabalhos.jpg": "/static/media/21_Estrutura habitação_final de trabalhos.0b8a85d6f42564e2b4c2.jpg",
     "static/media/07_Assentamento de cantarias.jpg": "/static/media/07_Assentamento de cantarias.3cb77e57ed2a50b86187.jpg",
@@ -154,10 +153,10 @@
     "static/media/09_Revestimento cerâmico interior.jpg": "/static/media/09_Revestimento cerâmico interior.b46b014820351ae45652.jpg",
     "index.html": "/index.html",
     "main.4bc7b5c5.css.map": "/static/css/main.4bc7b5c5.css.map",
-    "main.2b109f62.js.map": "/static/js/main.2b109f62.js.map"
+    "main.93f26c24.js.map": "/static/js/main.93f26c24.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc7b5c5.css",
-    "static/js/main.2b109f62.js"
+    "static/js/main.93f26c24.js"
   ]
 }
