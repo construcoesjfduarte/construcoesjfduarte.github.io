@@ -10,6 +10,10 @@
       property="og:image"
       content="%PUBLIC_URL%/logo/face.png"
     />
+    <meta
+      name="description"
+      content="A Construções J. F. Duarte é uma empresa do ramo da Construção Civil. Apesar de ainda jovem, a sua história remonta à década de 80. Em 1985, nasceu a Construções Duarte que foi fundada pelo pai do atual sócio-gerente da Construções J. F. Duarte, Jorge Duarte. Contamos, por isso com uma vasta experiência adquirida ao longo de mais de 30 anos."
+    />
 
     <!-- Favicon -->
     <link
@@ -92,11 +96,12 @@
 
     <!-- Frameworks -->
     <link rel="stylesheet" href="%PUBLIC_URL%/frameworks/bootstrap.min.css" />
-    <script src="%PUBLIC_URL%/frameworks/jquery-3.4.1.js" defer></script>
+    <script src="%PUBLIC_URL%/frameworks/jquery-3.4.1.min.js" defer></script>
     <script src="%PUBLIC_URL%/frameworks/bootstrap.min.js" defer></script>
     <link
       rel="stylesheet"
       href="%PUBLIC_URL%/frameworks/fontawesome/css/all.css"
+      defer
     />
 
     <!-- Fonts -->
@@ -203,27 +208,29 @@
 
       <div class="portefolio" id="portefolio">
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-8">
-                <h1>Portefólio</h1>
-                <p id="portfolio-text">Aqui ficam algumas amostras do trabalho desenvolvido</p>
-                <div class="row albuns-container" id="root">
-                    <div class="d-flex text-center waiting-status">
-                        <div class="spinner-grow text-primary" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                
-                        <div class="spinner-grow text-warning" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                
-                        <div class="spinner-grow text-danger" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                    </div>
+          <div class="col-10 col-md-8 col-lg-8">
+            <h1>Portefólio</h1>
+            <p id="portfolio-text">
+              Aqui ficam algumas amostras do trabalho desenvolvido
+            </p>
+            <div class="row albuns-container" id="root">
+              <div class="d-flex text-center waiting-status">
+                <div class="spinner-grow text-primary" role="status">
+                  <span class="sr-only">Loading...</span>
                 </div>
+
+                <div class="spinner-grow text-warning" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+
+                <div class="spinner-grow text-danger" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
       <div class="contacts" id="contactos">
         <div class="row justify-content-center">
