@@ -13,7 +13,7 @@ const importAll = (context) => {
 };
 
 const albuns = importAll(
-  require.context("../albuns", true, /\.(gif|jpe?g|svg)$/)
+  require.context("../albuns", true, /\.(gif|jpe?g|svg|png)$/)
 );
 
 export default albuns;
