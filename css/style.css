@@ -28,6 +28,7 @@
 html,
 body {
   margin: 0;
+  background-color: black;
 }
 
 body.not-ready {
@@ -597,7 +598,7 @@ section .contacts .footer {
   transform: translateY(-100%);
   color: white;
   height: 20px;
-  opacity: 0.3;
+  opacity: 1;
   font-size: 13px;
   background-color: black;
 }
