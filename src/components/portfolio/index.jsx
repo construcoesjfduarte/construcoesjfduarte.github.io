@@ -1,7 +1,6 @@
 import Album from "../album";
 
 const Portfolio = ({ albuns }) => {
-  console.log(albuns);
   return (
     <>
       {Object.entries(albuns).map(([name, photos]) => (
