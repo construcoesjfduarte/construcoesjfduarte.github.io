@@ -284,31 +284,31 @@ main .home-front {
   }
 
   main .home {
-    background-image: url("../home/back_small.webp");
+    background-image: url("../home/back_small.jpg");
   }
 
   main .home-front {
-    background-image: url("../home/front_small.webp");
+    background-image: url("../home/front_small.png");
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   main .home {
-    background-image: url("../home/back_medium.webp");
+    background-image: url("../home/back_medium.jpg");
   }
 
   main .home-front {
-    background-image: url("../home/front_medium.webp");
+    background-image: url("../home/front_medium.png");
   }
 }
 
 @media screen and (min-width: 1200px) {
   main .home {
-    background-image: url("../home/back_large.webp");
+    background-image: url("../home/back_large.jpg");
   }
 
   main .home-front {
-    background-image: url("../home/front_large.webp");
+    background-image: url("../home/front_large.png");
   }
 }
 
