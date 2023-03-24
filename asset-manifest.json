@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc7b5c5.css",
-    "main.js": "/static/js/main.93f26c24.js",
+    "main.js": "/static/js/main.8a7b7b83.js",
+    "static/media/35_test.jpg": "/static/media/35_test.1387bd1339f388a50863.jpg",
+    "static/media/34_teste.jpg": "/static/media/34_teste.9f44cf044e1dcc43bdf3.jpg",
     "static/media/11_Madeiramento para telhado.jpg": "/static/media/11_Madeiramento para telhado.d693cc1dc03a2bf95d43.jpg",
     "static/media/04_Capoto.jpg": "/static/media/04_Capoto.55a1f7ba2a536b863f73.jpg",
     "static/media/15_Estrutura_fundações.jpg": "/static/media/15_Estrutura_fundações.c9016beea2e2c9cb3e31.jpg",
@@ -153,10 +155,10 @@
     "static/media/09_Revestimento cerâmico interior.jpg": "/static/media/09_Revestimento cerâmico interior.b46b014820351ae45652.jpg",
     "index.html": "/index.html",
     "main.4bc7b5c5.css.map": "/static/css/main.4bc7b5c5.css.map",
-    "main.93f26c24.js.map": "/static/js/main.93f26c24.js.map"
+    "main.8a7b7b83.js.map": "/static/js/main.8a7b7b83.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc7b5c5.css",
-    "static/js/main.93f26c24.js"
+    "static/js/main.8a7b7b83.js"
   ]
 }
