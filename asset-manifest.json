@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc7b5c5.css",
-    "main.js": "/static/js/main.d9ffa0de.js",
+    "main.js": "/static/js/main.e12eb8a8.js",
     "static/media/IMG_20220120_165537_6.jpg": "/static/media/IMG_20220120_165537_6.c2a83f3aac149c84f112.jpg",
     "static/media/IMG_20210119_092800_8.jpg": "/static/media/IMG_20210119_092800_8.6f062ecea484b92248e3.jpg",
     "static/media/IMG_20210521_101042_0.jpg": "/static/media/IMG_20210521_101042_0.2666fa0a1da145ac0d47.jpg",
@@ -10,6 +10,9 @@
     "static/media/IMG_20210119_092757_6.jpg": "/static/media/IMG_20210119_092757_6.9f44cf044e1dcc43bdf3.jpg",
     "static/media/IMG_20221202_141833_0.jpg": "/static/media/IMG_20221202_141833_0.e05830193b9eb0dc2341.jpg",
     "static/media/IMG_20220421_121134_3.jpg": "/static/media/IMG_20220421_121134_3.cade9020f2c496989478.jpg",
+    "static/media/IMG_20200922_113003_9.jpg": "/static/media/IMG_20200922_113003_9.861bb41a7a1ff787c944.jpg",
+    "static/media/IMG_20200924_120423_3.jpg": "/static/media/IMG_20200924_120423_3.410c7a3c3a93cc35e33d.jpg",
+    "static/media/IMG_20200731_141739_7.jpg": "/static/media/IMG_20200731_141739_7.0f9ef74d9c84b936cdc3.jpg",
     "static/media/IMG_20220311_180754_5.jpg": "/static/media/IMG_20220311_180754_5.40fd7b0c4512d57f16cf.jpg",
     "static/media/IMG_20220318_135651_3.jpg": "/static/media/IMG_20220318_135651_3.5c5252c814188700a904.jpg",
     "static/media/IMG_20220112_085440_3.jpg": "/static/media/IMG_20220112_085440_3.dde0ad7d5c609ccf4f1f.jpg",
@@ -178,10 +181,10 @@
     "static/media/09_Revestimento cerâmico interior.jpg": "/static/media/09_Revestimento cerâmico interior.b46b014820351ae45652.jpg",
     "index.html": "/index.html",
     "main.4bc7b5c5.css.map": "/static/css/main.4bc7b5c5.css.map",
-    "main.d9ffa0de.js.map": "/static/js/main.d9ffa0de.js.map"
+    "main.e12eb8a8.js.map": "/static/js/main.e12eb8a8.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc7b5c5.css",
-    "static/js/main.d9ffa0de.js"
+    "static/js/main.e12eb8a8.js"
   ]
 }
