@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc7b5c5.css",
-    "main.js": "/static/js/main.e12eb8a8.js",
+    "main.js": "/static/js/main.00ab22c4.js",
     "static/media/IMG_20220120_165537_6.jpg": "/static/media/IMG_20220120_165537_6.c2a83f3aac149c84f112.jpg",
     "static/media/IMG_20210119_092800_8.jpg": "/static/media/IMG_20210119_092800_8.6f062ecea484b92248e3.jpg",
     "static/media/IMG_20210521_101042_0.jpg": "/static/media/IMG_20210521_101042_0.2666fa0a1da145ac0d47.jpg",
@@ -11,14 +11,11 @@
     "static/media/IMG_20221202_141833_0.jpg": "/static/media/IMG_20221202_141833_0.e05830193b9eb0dc2341.jpg",
     "static/media/IMG_20220421_121134_3.jpg": "/static/media/IMG_20220421_121134_3.cade9020f2c496989478.jpg",
     "static/media/IMG_20200922_113003_9.jpg": "/static/media/IMG_20200922_113003_9.861bb41a7a1ff787c944.jpg",
-    "static/media/IMG_20200924_120423_3.jpg": "/static/media/IMG_20200924_120423_3.410c7a3c3a93cc35e33d.jpg",
-    "static/media/IMG_20200731_141739_7.jpg": "/static/media/IMG_20200731_141739_7.0f9ef74d9c84b936cdc3.jpg",
+    "static/media/0.jpg": "/static/media/0.6baaceda0ada4ad2c174.jpg",
     "static/media/IMG_20220311_180754_5.jpg": "/static/media/IMG_20220311_180754_5.40fd7b0c4512d57f16cf.jpg",
-    "static/media/IMG_20220318_135651_3.jpg": "/static/media/IMG_20220318_135651_3.5c5252c814188700a904.jpg",
     "static/media/IMG_20220112_085440_3.jpg": "/static/media/IMG_20220112_085440_3.dde0ad7d5c609ccf4f1f.jpg",
     "static/media/IMG_20220120_165529_1.jpg": "/static/media/IMG_20220120_165529_1.55282898e3294c761e73.jpg",
     "static/media/IMG_20210722_082915_6.jpg": "/static/media/IMG_20210722_082915_6.fd1647d200f4d1d98d3f.jpg",
-    "static/media/IMG_20220210_083531_3.jpg": "/static/media/IMG_20220210_083531_3.6baaceda0ada4ad2c174.jpg",
     "static/media/IMG_20210907_164931_3.jpg": "/static/media/IMG_20210907_164931_3.11950dab78408062d27d.jpg",
     "static/media/IMG_20210721_131104_4.jpg": "/static/media/IMG_20210721_131104_4.82c11bdce63c44412205.jpg",
     "static/media/IMG_20211117_172837_3.jpg": "/static/media/IMG_20211117_172837_3.a48473385359b411167d.jpg",
@@ -181,10 +178,10 @@
     "static/media/09_Revestimento cerâmico interior.jpg": "/static/media/09_Revestimento cerâmico interior.b46b014820351ae45652.jpg",
     "index.html": "/index.html",
     "main.4bc7b5c5.css.map": "/static/css/main.4bc7b5c5.css.map",
-    "main.e12eb8a8.js.map": "/static/js/main.e12eb8a8.js.map"
+    "main.00ab22c4.js.map": "/static/js/main.00ab22c4.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc7b5c5.css",
-    "static/js/main.e12eb8a8.js"
+    "static/js/main.00ab22c4.js"
   ]
 }
