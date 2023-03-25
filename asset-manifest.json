@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc7b5c5.css",
-    "main.js": "/static/js/main.9217b3e7.js",
+    "main.js": "/static/js/main.d9ffa0de.js",
     "static/media/IMG_20220120_165537_6.jpg": "/static/media/IMG_20220120_165537_6.c2a83f3aac149c84f112.jpg",
     "static/media/IMG_20210119_092800_8.jpg": "/static/media/IMG_20210119_092800_8.6f062ecea484b92248e3.jpg",
     "static/media/IMG_20210521_101042_0.jpg": "/static/media/IMG_20210521_101042_0.2666fa0a1da145ac0d47.jpg",
     "static/media/IMG_20210210_142434_6.jpg": "/static/media/IMG_20210210_142434_6.1387bd1339f388a50863.jpg",
     "static/media/IMG_20220120_165540_1.jpg": "/static/media/IMG_20220120_165540_1.0ef2446cc3e2fce114a6.jpg",
     "static/media/IMG_20210119_092757_6.jpg": "/static/media/IMG_20210119_092757_6.9f44cf044e1dcc43bdf3.jpg",
+    "static/media/IMG_20221202_141833_0.jpg": "/static/media/IMG_20221202_141833_0.e05830193b9eb0dc2341.jpg",
+    "static/media/IMG_20220421_121134_3.jpg": "/static/media/IMG_20220421_121134_3.cade9020f2c496989478.jpg",
     "static/media/IMG_20220311_180754_5.jpg": "/static/media/IMG_20220311_180754_5.40fd7b0c4512d57f16cf.jpg",
     "static/media/IMG_20220318_135651_3.jpg": "/static/media/IMG_20220318_135651_3.5c5252c814188700a904.jpg",
     "static/media/IMG_20220112_085440_3.jpg": "/static/media/IMG_20220112_085440_3.dde0ad7d5c609ccf4f1f.jpg",
@@ -16,11 +18,13 @@
     "static/media/IMG_20220210_083531_3.jpg": "/static/media/IMG_20220210_083531_3.6baaceda0ada4ad2c174.jpg",
     "static/media/IMG_20210907_164931_3.jpg": "/static/media/IMG_20210907_164931_3.11950dab78408062d27d.jpg",
     "static/media/IMG_20210721_131104_4.jpg": "/static/media/IMG_20210721_131104_4.82c11bdce63c44412205.jpg",
+    "static/media/IMG_20211117_172837_3.jpg": "/static/media/IMG_20211117_172837_3.a48473385359b411167d.jpg",
     "static/media/IMG_20210811_174615_0.jpg": "/static/media/IMG_20210811_174615_0.ceea7fa78a1f9d691eb3.jpg",
     "static/media/IMG_20210602_132843_2.jpg": "/static/media/IMG_20210602_132843_2.6e11edbff48abc21b676.jpg",
     "static/media/IMG_20210521_081132_9.jpg": "/static/media/IMG_20210521_081132_9.e6222a82de09fd4f2883.jpg",
     "static/media/IMG_20210521_172229_4.jpg": "/static/media/IMG_20210521_172229_4.5ead6c9ff11a33994819.jpg",
     "static/media/IMG_20221018_100009_7.jpg": "/static/media/IMG_20221018_100009_7.7980c73de8dbc4b1fa95.jpg",
+    "static/media/IMG_20221220_161333_8.jpg": "/static/media/IMG_20221220_161333_8.7f202a9653515fc53ece.jpg",
     "static/media/IMG_20210811_174631_5.jpg": "/static/media/IMG_20210811_174631_5.497263bf62e70935fa0e.jpg",
     "static/media/IMG_20221220_124200_6.jpg": "/static/media/IMG_20221220_124200_6.53b37870ded335208067.jpg",
     "static/media/11_Madeiramento para telhado.jpg": "/static/media/11_Madeiramento para telhado.d693cc1dc03a2bf95d43.jpg",
@@ -174,10 +178,10 @@
     "static/media/09_Revestimento cerâmico interior.jpg": "/static/media/09_Revestimento cerâmico interior.b46b014820351ae45652.jpg",
     "index.html": "/index.html",
     "main.4bc7b5c5.css.map": "/static/css/main.4bc7b5c5.css.map",
-    "main.9217b3e7.js.map": "/static/js/main.9217b3e7.js.map"
+    "main.d9ffa0de.js.map": "/static/js/main.d9ffa0de.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc7b5c5.css",
-    "static/js/main.9217b3e7.js"
+    "static/js/main.d9ffa0de.js"
   ]
 }
