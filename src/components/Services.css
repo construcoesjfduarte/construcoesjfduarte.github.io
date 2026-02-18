@@ -26,31 +26,33 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-align: center;
+  border: 2px solid transparent;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .service-icon {
-  width: 70px;
-  height: 70px;
-  background: var(--color-accent);
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #e8c9a0 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
   color: var(--color-white);
-  transition: var(--transition);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
 }
 
 .service-card:hover .service-icon {
-  background: var(--color-primary);
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5);
 }
 
 .service-title {
