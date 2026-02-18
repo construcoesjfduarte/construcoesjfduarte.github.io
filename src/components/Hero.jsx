@@ -47,7 +47,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Mais de 30 anos de excelência em construção civil
+            Mais de 40 anos de excelência em construção civil
           </motion.p>
 
           <motion.div

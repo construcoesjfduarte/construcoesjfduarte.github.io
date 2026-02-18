@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="footer-brand">
             <h3>Construções J.F. Duarte</h3>
             <p>
-              Mais de 30 anos de experiência em construção civil,
+              Mais de 40 anos de experiência em construção civil,
               primando sempre pela qualidade e satisfação dos nossos clientes.
             </p>
           </div>
