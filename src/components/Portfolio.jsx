@@ -22,6 +22,12 @@ const albumNames = [
   'Trabalhos em Pedra',
 ]
 
+// Helper function to get the base name without extension
+const getBaseName = (path) => {
+  const fileName = path.split('/').pop()
+  return fileName.replace(/\.(jpg|jpeg|png|webp|gif)$/i, '')
+}
+
 const Portfolio = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -31,16 +37,32 @@ const Portfolio = () => {
 
   const albums = useMemo(() => {
     return albumNames.map(name => {
-      const images = []
+      // Group images by base name to handle WebP + original pairs
+      const imagesByBaseName = {}
 
       Object.entries(imageModules).forEach(([path, url]) => {
         if (path.includes(`/portfolio/${name}/`)) {
-          images.push({
-            src: url,
-            alt: name,
-          })
+          const baseName = getBaseName(path)
+          const isWebp = path.endsWith('.webp')
+
+          if (!imagesByBaseName[baseName]) {
+            imagesByBaseName[baseName] = { webp: null, fallback: null, alt: name }
+          }
+
+          if (isWebp) {
+            imagesByBaseName[baseName].webp = url
+          } else {
+            imagesByBaseName[baseName].fallback = url
+          }
         }
       })
+
+      // Create images array, prioritizing WebP
+      const images = Object.values(imagesByBaseName).map(img => ({
+        src: img.webp || img.fallback, // Prefer WebP
+        fallback: img.fallback, // Keep fallback for browsers without WebP support
+        alt: img.alt,
+      }))
 
       return {
         id: name.toLowerCase().replace(/\s+/g, '-').replace(/[áàã]/g, 'a').replace(/[éê]/g, 'e').replace(/[í]/g, 'i').replace(/[óô]/g, 'o').replace(/[ú]/g, 'u').replace(/[ç]/g, 'c'),
@@ -65,7 +87,7 @@ const Portfolio = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-label">Portfólio</span>
+          <span className="section-label">Portefólio</span>
           <h2 className="section-title">Os Nossos Trabalhos</h2>
           <p className="section-subtitle">
             Aqui ficam algumas amostras do trabalho desenvolvido
@@ -83,11 +105,16 @@ const Portfolio = () => {
               onClick={() => openLightbox(album)}
             >
               <div className="portfolio-card-image">
-                <img
-                  src={album.images[0]?.src || '/placeholder.jpg'}
-                  alt={album.name}
-                  loading="lazy"
-                />
+                <picture>
+                  {album.images[0]?.src?.endsWith('.webp') && (
+                    <source srcSet={album.images[0].src} type="image/webp" />
+                  )}
+                  <img
+                    src={album.images[0]?.fallback || album.images[0]?.src || '/placeholder.jpg'}
+                    alt={album.name}
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="portfolio-card-overlay">
                   <h3>{album.name}</h3>
                   <p>{album.images.length} {album.images.length === 1 ? 'foto' : 'fotos'}</p>

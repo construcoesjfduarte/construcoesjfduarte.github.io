@@ -57,7 +57,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <a href="#portefolio" className="btn btn-primary">
-              Ver Portfólio
+              Ver Portefólio
             </a>
             <a href="#contactos" className="btn btn-secondary">
               Contactar
@@ -66,13 +66,14 @@ const Hero = () => {
         </motion.div>
       </div>
       <motion.a
-        href="#sobre"
+        href="#servicos"
         className="scroll-indicator"
+        aria-label="Scroll para a secção de serviços"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
       >
-        <ChevronDown size={32} />
+        <ChevronDown size={32} aria-hidden="true" />
       </motion.a>
     </section>
   )

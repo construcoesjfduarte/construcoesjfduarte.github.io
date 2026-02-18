@@ -1,5 +1,17 @@
-import { Facebook, Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, Mail, MapPin } from 'lucide-react'
 import './Footer.css'
+
+const FacebookIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+    <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
+  </svg>
+)
+
+const GoogleIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+    <path d="M12 11v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42S9.61 7.58 12 7.58c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 5.69 13.89 5 12 5c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12z"/>
+  </svg>
+)
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -21,7 +33,7 @@ const Footer = () => {
             <ul>
               <li><a href="#inicio">Início</a></li>
               <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#portefolio">Portfólio</a></li>
+              <li><a href="#portefolio">Portefólio</a></li>
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#contactos">Contactos</a></li>
             </ul>
@@ -54,7 +66,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Facebook"
               >
-                <Facebook size={24} />
+                <FacebookIcon />
+              </a>
+              <a
+                href="https://maps.app.goo.gl/1hHyQJbq944E7kLb6"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Maps"
+              >
+                <GoogleIcon />
               </a>
             </div>
           </div>

@@ -48,10 +48,18 @@
     <meta name="geo.position" content="41.5454;-8.4265" />
     <meta name="ICBM" content="41.5454, -8.4265" />
 
-    <!-- Fonts -->
+    <!-- Preload Hero Image for LCP optimization -->
+    <link rel="preload" as="image" href="/home/hero.webp" type="image/webp" fetchpriority="high">
+    <!-- PNG fallback is available but not preloaded (only needed for <5% of browsers without WebP support) -->
+
+    <!-- Fonts - Non-blocking load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- Structured Data - Local Business -->
     <script type="application/ld+json">

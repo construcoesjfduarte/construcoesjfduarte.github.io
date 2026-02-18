@@ -76,7 +76,7 @@ const About = () => {
                 {stat.icon ? (
                   <stat.icon className="stat-icon-check" size={40} />
                 ) : (
-                  <h4 className="stat-value">{stat.value}</h4>
+                  <span className="stat-value">{stat.value}</span>
                 )}
                 <p className="stat-label">{stat.label}</p>
               </motion.div>

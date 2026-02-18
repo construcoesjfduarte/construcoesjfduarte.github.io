@@ -14,11 +14,19 @@
   left: 0;
   right: 0;
   bottom: -10%;
+  /* Fallback for browsers that don't support WebP */
   background-image: url('/home/Adobe Firefly.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   will-change: transform;
+}
+
+/* WebP support - modern browsers */
+@supports (background-image: url('/home/hero.webp')) {
+  .hero-background {
+    background-image: url('/home/hero.webp');
+  }
 }
 
 .hero-overlay {
@@ -88,7 +96,7 @@
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .btn-primary:hover {
