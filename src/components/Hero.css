@@ -15,7 +15,7 @@
   right: 0;
   bottom: -10%;
   /* Fallback for browsers that don't support WebP */
-  background-image: url('/home/Adobe Firefly.png');
+  background-image: url('/home/teste.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,9 +23,9 @@
 }
 
 /* WebP support - modern browsers */
-@supports (background-image: url('/home/hero.webp')) {
+@supports (background-image: url('/home/teste.webp')) {
   .hero-background {
-    background-image: url('/home/hero.webp');
+    background-image: url('/home/teste.webp');
   }
 }
 

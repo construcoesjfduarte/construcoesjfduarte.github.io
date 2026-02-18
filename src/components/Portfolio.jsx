@@ -89,9 +89,6 @@ const Portfolio = () => {
         >
           <span className="section-label">Portefólio</span>
           <h2 className="section-title">Os Nossos Trabalhos</h2>
-          <p className="section-subtitle">
-            Aqui ficam algumas amostras do trabalho desenvolvido
-          </p>
         </motion.div>
 
         <div className="portfolio-grid">
