@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   background: var(--color-white);
+  position: relative;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,24 +92,6 @@ button {
   font-size: 1.1rem;
   color: var(--color-text-light);
   max-width: 600px;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #c49563;
 }
 
 /* Selection */

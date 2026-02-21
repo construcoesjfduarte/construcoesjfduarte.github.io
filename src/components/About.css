@@ -4,6 +4,7 @@
   background: var(--color-white);
   display: flex;
   align-items: center;
+  overflow-x: clip;
 }
 
 .about-content {
